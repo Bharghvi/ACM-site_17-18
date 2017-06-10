@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NIT Surat ACM</title><meta charset="utf-8" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+		<script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    	<div id="thecontainer">
+			<div id="logohead" class="middle">
+				<div id="acmlogo">
+				</div>
+				<div id="acmtext">
+					NIT Surat ACM Chapter
+				</div>
+				<div id="svnitlogo">
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="fullhr"></div>
+			<div id="headerblock" class="middle">
+				<ul id="navigationpanel">
+					<li id="0" class="navitems"><a href="./index.php">Home</a></li>
+					<li id="1" class="navitems"><a href="./events.php">Events</a></li><!-- place event archives here as well -->
+					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
+					<li id="3" class="navitems"><a href="./about.php">About</a></li>
+					<li id="4" class="navitems"><a href="./projects.php">Projects</a></li>
+					<li id="5" class="navitems"><a href="./contact.php">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+    	<div class="datablock middle">
+    		<div class="heading">
+    			We are here
+    		</div>
+    		<iframe width="800" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+    	</div>
+    	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
+    	<div class="datablock middle">
+    		<div class="heading">
+    			Say something
+    		</div>
+    		<div class="content">
+    			<form action="saySomething.php" method="POST">
+    				<span class="member saySomethingColumn1">
+    					Name:
+    				</span>
+    				<span>
+    					<input type="text" name="name" class="custominput" />
+    				</span>
+    				<br />
+    				<span class="member saySomethingColumn1">
+    					E-mail *:
+    				</span>
+    				<span>
+    					<input type="email" name="email" required class="custominput" />
+    				</span>
+    				<br />
+    				<div style="position:relative">
+    					<span class="member saySomethingColumn1" style="position:absolute;top:0">
+    						Message *:
+    					</span>
+    					<textarea rows="5" cols="40" wrap="physical" name="message" required class="custominput saySomethingTextBox">
+    					</textarea>
+    				</div>
+    				<span style="position:relative;left:105px">
+    					<input id="saySomethingSubmit" type="submit" value="Submit" />
+    				</span>
+    			</form>
+    			<div id="addresscontainer">
+    				<b>
+    					Snail Mail:
+    				</b>
+    				<br />
+    				ACM NIT Surat Chapter,
+    				<br />
+    				Computer Engineering Department,
+    				<br />
+    				SVNIT Surat,
+    				<br />
+    				Ichchhanath, Surat - 395007
+    				<br /><br />
+    				<b>
+    					Email:
+    				</b>
+    				<br />
+    				admin@nitsurat.acm.org
+    			</div>
+    		</div>
+    	</div>
+
+    <?php
+
+    include_once('footer.php');
+
+    ?>
+
+    <div id="thefooter">
+        <div class="middle" style="width: 800px">
+          <span id="copyleft"><img src="./img/copyleft.png" alt="Copyleft symbol" title="Copyleft" width="16" height="16" style="position: relative;top: 4px;padding: 2px" />Copyleft ACM NIT Surat.</span>
+          <div id="extlinks">
+            External Links :<br />
+            <a href="http://www.svnit.ac.in" target="_blank" title="SVNIT Surat Homepage">
+              SVNIT Surat
+            </a><br />
+            <a href="//nitsurat.acm.org/forum" target="_blank" title="ACM SVNIT Forum">
+              Forum @ ACM SVNIT
+            </a><br />
+            <a href="//nitsurat.acm.org/chat/a/" target="_blank" title="ACM SVNIT Forum">
+              Find someone online
+            </a>
+          </div>
+
+          <div id="plugins">
+            <span><a id="fb" target="_blank" href="https://www.facebook.com/acmnitsurat/" title="ACM SVNIT Facebook Page"></a></span>
+            <span><a id="t" target="_blank" href="https://www.twitter.com/acmnitsurat/" title="Follow ACM SVNIT on Twitter"></a></span>
+            <span><a id="gp" target="_blank" href="https://plus.google.com/102663242082547358717" title="ACM SVNIT Google+ Profile"></a></span>
+          </div>
+        </div>
+      </div>
+      <noscript style="position: absolute;top: 0;height: auto; width: 100%;background: #f00;text-align: center;color: #fff">This site uses JavaScript for its normal functioning. You may experience trouble navigating at this page. Open the lite version <a href="http://nitsurat.acm.org/lite/">here</a>.
+      </noscript>
+      <script src="js/data.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/memberData.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<style>
+wel{
+		display:none;
+		text-align:center;
+		margin: 0;
+		padding: 0;
+	}
+.wel {
+		display: inline-block;
+		background: grey;
+		color: white;
+		letter-spacing:3px;
+		padding: 2.0em 6.5em;
+		list-style-type:none;
+		text-transform:capitalize;
+	}
+.wel > li {
+		font-size: 45px;
+		letter-spacing: 8px
+	
+}
+
+#header h1 {
+		display: inline-block;
+		font-size:3.0em;
+		position:relative;
+		top: -68px;
+		left: 10px;
+		color: grey;
+		}
+		
+bar{
+		display:none;
+		margin 0;
+		padding 0;
+	}
+.bar {
+			list-style-type:none;
+			display: inline-block;
+			background:#grey;
+			padding: 7.0em 6.0em;
+	}
+
+
+</style>
