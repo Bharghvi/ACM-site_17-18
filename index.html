@@ -3,35 +3,62 @@
   <head>
     <meta charset="utf-8">
     <title>NIT Surat ACM</title><meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="css/style.css" rel="stylesheet" />
 		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
-		<script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script>
+		<!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
   </head>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-caret-square-o-up" style="color: white; font-size: 25px"></i></button>
     	<div id="thecontainer">
 			<div id="logohead" class="middle">
-				<div id="acmlogo">
+				<div >
+          <img id="acmlogo" src="img/resized_logo.png" alt="">
 				</div>
 				<div id="acmtext">
-					NIT Surat ACM Chapter
+					Association for Computing Machinery NIT Surat Student Chapter
 				</div>
-				<div id="svnitlogo">
+				<div >
+          <img  id="svnitlogo" src="img/svnit-logo.png" alt="">
 				</div>
 				<div class="clear"></div>
 			</div>
 			<div class="fullhr"></div>
 			<div id="headerblock" class="middle">
 				<ul id="navigationpanel">
-					<li id="0" class="navitems"><a href="./index.php">Home</a></li>
-					<li id="1" class="navitems"><a href="./events.php">Events</a></li><!-- place event archives here as well -->
-					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
-					<li id="3" class="navitems"><a href="./about.php">About</a></li>
-					<li id="4" class="navitems"><a href="./projects.php">Projects</a></li>
-					<li id="5" class="navitems"><a href="./contact.php">Contact</a></li>
+					<li id="0" class="navitems"><a href="./index.html">Home</a></li>
+					<li id="1" class="navitems"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
+					<li id="2" class="navitems"><a href="./team.html">Team</a></li>
+					<li id="4" class="navitems"><a href="./projects.html">Projects</a></li>
+					<li id="5" class="navitems"><a href="./contact.html">Contact</a></li>
 				</ul>
 			</div>
 		</div>
+    <div id="titlebar">
+      <div id="titlebartext">
+        Welcome
+      </div>
+    </div>
     <div id="thecontent">
       <!-- Populate this through JavaScript -->
       <!-- No more populate using JavaScript. JavaScript-ifying had serious issues with bookmarking. It can be achieved, but reinvent the wheel is bad. -->
@@ -40,82 +67,43 @@
         </div>
       </div>
     </div>
-    <!-- <div id="thefooter">
-        <div class="middle" style="width: 800px">
-          <span id="copyleft"><img src="./img/copyleft.png" alt="Copyleft symbol" title="Copyleft" width="16" height="16" style="position: relative;top: 4px;padding: 2px" />Copyleft ACM NIT Surat.</span>
-          <div id="extlinks">
-            External Links :<br />
-            <a href="http://www.svnit.ac.in" target="_blank" title="SVNIT Surat Homepage">
-              SVNIT Surat
-            </a><br />
-            <a href="//nitsurat.acm.org/forum" target="_blank" title="ACM SVNIT Forum">
-              Forum @ ACM SVNIT
-            </a><br />
-            <a href="//nitsurat.acm.org/chat/a/" target="_blank" title="ACM SVNIT Forum">
-              Find someone online
-            </a>
-          </div>
 
-          <div id="plugins">
-            <span><a id="fb" target="_blank" href="https://www.facebook.com/acmnitsurat/" title="ACM SVNIT Facebook Page"></a></span>
-            <span><a id="t" target="_blank" href="https://www.twitter.com/acmnitsurat/" title="Follow ACM SVNIT on Twitter"></a></span>
-            <span><a id="gp" target="_blank" href="https://plus.google.com/102663242082547358717" title="ACM SVNIT Google+ Profile"></a></span>
-          </div>
-        </div>
-      </div>
-      <noscript style="position: absolute;top: 0;height: auto; width: 100%;background: #f00;text-align: center;color: #fff">This site uses JavaScript for its normal functioning. You may experience trouble navigating at this page. Open the lite version <a href="http://nitsurat.acm.org/lite/">here</a>.
-      </noscript>
-      <script src="js/data.js"></script>
-      <script src="js/main.js"></script>
-      <script src="js/memberData.js"></script> -->
+<div class="footer-content">
+  <div class="f1">
+    <h3>ACM - NIT,  SURAT</h3>
+    <br>
+    <hr>
+    <p id="f1-data">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+    <h4>Get Social</h4>
+    <a href=#><img id='fb' src="img/fb.png" alt=""></a>
+     <a href=#><img id='twitter' src="img/twitter.png" alt=""></a>
 
+    <a href=#><img id='google' src="img/google.png" alt=""></a>
+    </div>
+  <div class="f2">
+    <h3>QUICK LINKS</h3>
+    <br>
+    <hr>
+    <ul id="tags">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <div class="f3">
+    <h3>CONTACT</h3>
+    <br>
+    <hr>
+    <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
+    <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
+    <i class='fa fa-envelope' style="color: #cbd1db"></i>
+    <p>abc@xyz.com</p><br>
+    <i class='fa fa-mobile' style="color: #cbd1db"></i>
+    <p>SVNIT, Ichchhanth, Surat - 395 007</p>
 
-
-
-      </div>
-      <div class="content">
-            <div class="footer-grids">
-              <div class="footer one">
-                  <h3>NIT, Surat</h3>
-                          <hr>
-                <p> Sardar Vallabhbhai National Institute Of Technology, Surat is one of the 17 Regional Engineering Colleges that were established as joint venture of the Government of India and the Government of Gujarat. It was established in June 1961 with facilities to run Bachelor's Degree Programmes in Civil, Electrical and Mechanical Engineering disciplines. It is now changed to National Institute of Technology along with other RECs. </p>
-                <div class="clear"></div>
-              </div>
-              <div class="footer two">
-                <h3>Tags</h3>
-                          <hr>
-                <ul>
-                  <li><a class="fb" href="index.html"><i></i>Home</a></li>
-                  <li><a class="fb1" href="About.html"><i></i>About Us</a></li>
-                  <li><a class="fb2" href="teampage.php"><i></i>Team</a></li>
-                  <li><a class="fb3" href="Events.php"><i></i>Events</a></li>
-                  <li><a class="fb4" href="Project.html"><i></i>Projects</a></li>
-                              <li><a class="fb4" href="contactpage.html"><i></i>Contact Us</a></li>
-                </ul>
-              </div>
-                      <div class="footer three">
-                <h3>Contact</h3>
-                          <hr>
-                <ul>
-                  <li>ACM NIT Surat Chapter,  <span>SVNIT,Surat</span>Ichchhanath, Surat. 395007 </li>
-                  <li><b>Phone:</b>  0261 225 9571 </li>
-                  <li><a href="#"> admin@nitsurat.acm.org</a></li>
-                </ul>
-              </div>
-              <div class="clear"></div>
-            </div>
-            <div class="copy-right-grids">
-              <div class="copy-left">
-                  <p class="footer-gd">Copyright ©2016, SVNIT ACM Student Chapter. All Rights Reserved </p>
-              </div>
-              <div class="copy-right">
-                <ul>
-                  <li><a href="#">Developed and Designed by SVNIT ACM Student Chapter Team</a></li>
-                </ul>
-              </div>
-              <div class="clear"></div>
-            </div>
-
-        </div>
+  </div>
+</div>
   </body>
 </html>
