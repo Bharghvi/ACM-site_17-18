@@ -1,4 +1,5 @@
-*{margin: 0;padding: 0}
+*{margin: 0;padding: 0; font-family: 'Roboto', sans-serif}
+
 :root{
     --color-light-grey:#e8ecf2;
     --color-grey: #4f6482;
@@ -59,6 +60,7 @@ body{
 	list-style-type: none;
   display: flex;
   justify-content: center;
+  margin-bottom: 0px !important;
 }
 #navigationpanel li{
 
@@ -105,8 +107,9 @@ body{
 }
 
 .datablock{
-	width: 800px;
-	padding: 20px;
+  padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px
 }
 
 #picsContainer{
@@ -121,13 +124,13 @@ body{
 
 }
 
-.heading{
+#heading{
 	font-size: 25px;
 	color: var(--color-blue);
 	padding: 5px 0;
 }
 
-.content{
+#content{
 	color: #777;
 }
 
@@ -284,13 +287,6 @@ body{
 	border-top: 1px solid #DDDDDD;
 }
 
-#copyleft{
-	left: 100px;
-	top: 10px;
-	background: inherit;
-	float: left;
-}
-
 #extlinks{
 	margin-left: 100px;
 	float:left;
@@ -300,25 +296,6 @@ body{
 	position: relative;
 	top: 10px;
 	float: right;
-}
-
-#fb , #t, #gp {
-	width: 48px;
-	height: 48px;
-	padding: 2px;
-	display: inline-block;
-}
-
-#fb{
-	background: url('../img/favicon_fb_unattended.png');
-}
-
-#t{
-	background: url('../img/favicon_t_unattended.png');
-}
-
-#gp{
-	background: url('../img/favicon_gp_unattended.png');
 }
 
 .clear{
@@ -428,8 +405,9 @@ hr{
   border-style: groove;
 }
 
-h3{
+.h3{
   font-size: 15px;
+  margin: 0
 }
 
 #icon::before {
@@ -442,4 +420,64 @@ i {
 
 p {
 font-size: 14px
+}
+
+.copyleft {
+  background-color: black;
+color: #cbd1db;
+text-align: center;
+padding-bottom: 20px;
+}
+p {
+font-size: 14px;
+text-align: justify;
+text-justify: inter-word;
+}
+
+#about{
+    padding: 0 200px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.what, .why {
+    width: 50%;
+    padding: 0 10px;
+}
+.why {
+    margin-top: 13px;
+}
+
+.hr {
+  margin: 0;
+  padding: 0;
+  border: 2px groove  #cbd1db;
+}
+
+.social {
+  text-decoration: none;
+  padding-right: 20px;
+  margin-top: 40px
+}
+
+
+.pics {
+    padding: 0;
+    margin:  0;
+    width: 900px;
+	height: 500px;
+	display: block;
+	position: absolute;
+	overflow: hidden;
+}
+
+.pics img {
+    padding: 15px;
+    border:  1px solid #ccc;
+    background-color: #eee;
+    width:  200px;
+    height: 200px;
+    top:  0;
+    left: 0
 }
