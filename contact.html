@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
     <meta charset="utf-8">
     <title>NIT Surat ACM</title><meta charset="utf-8" />
-		<link href="css/style.css" rel="stylesheet" />
-		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
-		<script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/style.css" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+        <link rel="stylesheet" href="css/event.css">
+        <!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+    <script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
   </head>
   <body>
     	<div id="thecontainer">
@@ -98,31 +125,47 @@
 
     ?>
 
-    <div id="thefooter">
-        <div class="middle" style="width: 800px">
-          <span id="copyleft"><img src="./img/copyleft.png" alt="Copyleft symbol" title="Copyleft" width="16" height="16" style="position: relative;top: 4px;padding: 2px" />Copyleft ACM NIT Surat.</span>
-          <div id="extlinks">
-            External Links :<br />
-            <a href="http://www.svnit.ac.in" target="_blank" title="SVNIT Surat Homepage">
-              SVNIT Surat
-            </a><br />
-            <a href="//nitsurat.acm.org/forum" target="_blank" title="ACM SVNIT Forum">
-              Forum @ ACM SVNIT
-            </a><br />
-            <a href="//nitsurat.acm.org/chat/a/" target="_blank" title="ACM SVNIT Forum">
-              Find someone online
-            </a>
-          </div>
+    <div class="footer-content">
+      <div class="f1">
+        <h3 style="font-size: 18px; margin: 0">ACM - NIT,  SURAT</h3>
+        <br>
+        <hr class="hr">
+        <p id="f1-data">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <h4>Get Social</h4>
+        <a class="social" href=#>  <i style="color : #3B5998; font-size: 25px;margin-top: 20px" class="fa fa-facebook-square"></i></a>
 
-          <div id="plugins">
-            <span><a id="fb" target="_blank" href="https://www.facebook.com/acmnitsurat/" title="ACM SVNIT Facebook Page"></a></span>
-            <span><a id="t" target="_blank" href="https://www.twitter.com/acmnitsurat/" title="Follow ACM SVNIT on Twitter"></a></span>
-            <span><a id="gp" target="_blank" href="https://plus.google.com/102663242082547358717" title="ACM SVNIT Google+ Profile"></a></span>
-          </div>
+         <a class="social" href=#><i style="color: #d34836; font-size: 25px;margin-top: 20px" class="fa fa-google"></i></a>
+
+        <a class="social" href=#><i style="color: #4099ff; font-size: 25px;margin-top: 20px" class="fa fa-twitter"></i></a>
         </div>
+      <div class="f2">
+        <h3 style="font-size: 18px; margin: 0">QUICK LINKS</h3>
+        <br>
+        <hr class="hr">
+        <ul id="tags">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </div>
-      <noscript style="position: absolute;top: 0;height: auto; width: 100%;background: #f00;text-align: center;color: #fff">This site uses JavaScript for its normal functioning. You may experience trouble navigating at this page. Open the lite version <a href="http://nitsurat.acm.org/lite/">here</a>.
-      </noscript>
+      <div class="f3">
+        <h3 style="font-size: 18px; margin: 0">CONTACT</h3>
+        <br>
+        <hr class="hr">
+        <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
+        <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
+        <i class='fa fa-envelope' style="color: #cbd1db"></i>
+        <p>abc@xyz.com</p><br>
+        <i class='fa fa-mobile' style="color: #cbd1db"></i>
+        <p>SVNIT, Ichchhanth, Surat - 395 007</p>
+
+      </div>
+    </div>
+    <div class="copyleft"><i class="fa fa-copyright fa-flip-horizontal"></i>
+      Copyleft ACM NIT SURAT
+    </div>
       <script src="js/data.js"></script>
       <script src="js/main.js"></script>
       <script src="js/memberData.js"></script>
