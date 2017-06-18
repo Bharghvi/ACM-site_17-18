@@ -34,45 +34,93 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 </script>
+
+<style type="text/css">
+    input,textarea{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    transition: 0.5s;
+    margin: 5px;
+}
+
+input:focus,textarea:focus {
+    border: 2px solid #0c264f;
+}
+table{
+    margin-right:auto;
+    margin-top,margin-bottom:10px; 
+    font-size: 18px;
+}
+
+td{
+}
+
+tr.header{
+    font-style: bold;
+    font-style: italic;
+    font-size: 27;
+    background-color: #0c264f;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr.footer{
+    text-align: center;
+}
+
+button{
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #0c264f;
+    padding: 5px 20px;
+}
+
+button:hover{
+    background-color: #0c264f;
+    color: white;
+    padding: 5px 20px;
+}
+</style>
   </head>
   <body>
-    	<div id="thecontainer">
-			<div id="logohead" class="middle">
-				<div id="acmlogo">
-				</div>
-				<div id="acmtext">
-					NIT Surat ACM Chapter
-				</div>
-				<div id="svnitlogo">
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="fullhr"></div>
-			<div id="headerblock" class="middle">
-				<ul id="navigationpanel">
-					<li id="0" class="navitems"><a href="./index.php">Home</a></li>
-					<li id="1" class="navitems"><a href="./events.php">Events</a></li><!-- place event archives here as well -->
-					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
-					<li id="3" class="navitems"><a href="./about.php">About</a></li>
-					<li id="4" class="navitems"><a href="./projects.php">Projects</a></li>
-					<li id="5" class="navitems"><a href="./contact.php">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-    	<div class="datablock middle">
-    		<div class="heading">
-    			We are here
-    		</div>
-    		<iframe width="800" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-    	</div>
-    	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-    	<div class="datablock middle">
-    		<div class="heading">
-    			Say something
-    		</div>
-    		<div class="content">
+    	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" style="color: white; font-size: 25px"></i></button>
+        <div id="thecontainer">
+            <div id="logohead" class="middle">
+                <div >
+          <img id="acmlogo" src="img/resized_logo.png" alt="">
+                </div>
+                <div id="acmtext">
+                    Association for Computing Machinery NIT Surat
+                </div>
+                <div >
+          <img  id="svnitlogo" src="img/svnit-logo.png" alt="">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="fullhr"></div>
+            <div id="headerblock" class="middle">
+                <ul id="navigationpanel">
+                    <li id="0" class="navitems"><a href="./index.html">Home</a></li>
+                    <li id="1" class="navitems"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
+                    <li id="2" class="navitems"><a href="./team.html">Team</a></li>
+                    <li id="4" class="navitems"><a href="./projects.html">Projects</a></li>
+                    <li id="5" class="navitems"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="titlebar">
+      <div id="titlebartext">
+        Get In Touch
+      </div>
+    </div>
+    	
+    	<!-- <div class="datablock middle">
+    		<div class="content"> -->
+            <div class="row" style="margin: 15px;" >
+            <div class="col-md-6">
+               
     			<form action="saySomething.php" method="POST">
-    				<span class="member saySomethingColumn1">
+    				<!-- <span class="member saySomethingColumn1">
     					Name:
     				</span>
     				<span>
@@ -95,9 +143,38 @@ function topFunction() {
     				</div>
     				<span style="position:relative;left:105px">
     					<input id="saySomethingSubmit" type="submit" value="Submit" />
-    				</span>
+    				</span> -->
+
+                    <table>
+                        <tr>
+                            <td width="100px" >Name</td>
+                            <td>:</td>
+                            <td><input type="text" size="40" name="name"/></td>
+                        </tr>
+                        <tr>
+                            <td width="100px" >Email *</td>
+                            <td>:</td>
+                            <td><input type="email" size="40" name="email" required/></td>
+                        </tr>
+                        <!-- <tr>
+                            <td width="200px" >Message</td>
+                            <td>:</td>
+                            <td><input type="text" name="message" required /></td>
+                        </tr> -->
+                        <tr>
+                            <td width="100px" >Message *</td>
+                            <td>:</td>
+                            <td><textarea name="message" rows="5" cols="41" required></textarea></td>
+                        </tr>
+                        <tr class="footer">
+                            <td colspan="3">
+                                <button type="submit" value="Login">Submit</button>
+                            </td>
+                        </tr>
+                    </table>
     			</form>
-    			<div id="addresscontainer">
+                </div>
+    			<div class="col-md-3 col-lg-offset-3"  style="text-decoration-color: #000000; font-size: 18px;">
     				<b>
     					Snail Mail:
     				</b>
@@ -116,14 +193,25 @@ function topFunction() {
     				<br />
     				admin@nitsurat.acm.org
     			</div>
-    		</div>
+    		
     	</div>
 
-    <?php
+   <!--  <?php
 
     include_once('footer.php');
 
-    ?>
+    ?> -->
+
+    <div class="google-map-header-bottom">
+        
+              <div class="row-fluid">
+              
+              <iframe width="1340" height="400" frameborder="0" style="border:0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233&amp;output=embed" allowfullscreen></iframe>
+                         
+                 
+              </div>        
+        
+        </div>
 
     <div class="footer-content">
       <div class="f1">
