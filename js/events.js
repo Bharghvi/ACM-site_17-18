@@ -4,6 +4,10 @@ $(".eventsPoster").click(function(){
 	$(".hoverBack").fadeIn(800);
 	$(".hoverMain").fadeIn(800);
 	$(".hoverClose").fadeIn(800);
+	var source=$(this).children()[0].getAttribute('src');
+	$(".hoverImg").attr('src',source);
+	var title=$(this).children()[1].innerHTML;
+	$(".hoverTitle").html(title);
 	$('html, body').css({ 'overflow': 'hidden'});
 });
 
