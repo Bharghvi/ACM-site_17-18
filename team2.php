@@ -73,6 +73,12 @@
 		 }
 		else $year=2017;
 		
+		?>
+		
+		<div>
+		<?php echo "Team of ".$year." - ".($year+1); ?>
+		</div>
+		<?php
 		$sql= "select * from team_details where year='$year'";
 
 		$result=mysqli_query($conn, $sql);
