@@ -161,6 +161,43 @@
 	display: none;
 }
 
+/* Design for project page */
+
+.projectDiv{
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px;
+	max-height: 500px;
+	box-shadow: 0 0 5px #607d8b;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.projectDiv h3{
+	color: #0c264f;
+}
+
+.projectDiv p{
+	font-size: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #555;
+}
+
+.projectTitles{
+	font-size: 17px;
+	color: #31708f;
+}
+
+.footerNotes{
+	width: 80%;
+	margin: 0 auto;
+	color: #607d8b;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+
 @media (min-width: 990px){
 .vcol-1{
 	width: 8.333%;
