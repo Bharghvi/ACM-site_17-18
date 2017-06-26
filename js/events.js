@@ -27,4 +27,22 @@ $(this).keyup(function(e){
 	}
 })
 
+$("#past1Menu").click(function(){
+	if ($("#past1").is(":visible")) {
+		$("#past1").slideUp(1000);
+	}
+	else{
+		$("#past1").slideDown(1000);	
+	}
+});
+
+$("#past2Menu").click(function(){
+	if ($("#past2").is(":visible")) {
+		$("#past2").slideUp(1000);
+	}
+	else{
+		$("#past2").slideDown(1000);	
+	}
+});
+
 });
