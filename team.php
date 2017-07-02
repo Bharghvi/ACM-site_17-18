@@ -25,23 +25,22 @@
     .circle {
         border-radius: 50%;
         color: white;
-        height: 200px;
+        height: 150px;
         font-weight: bold;
-        width: 200px;
+        width: 150px;
         display: table;
         position: relative;
-        margin: 20px auto;
-        background:url(img/team/deep.jpg) no-repeat center;
-        background-size: contain;
-        background-color: #ddd;
+        margin: 10px auto;
+        /*background-size: contain;*/
+        /*background-color: #ddd;*/
         box-shadow: 0 10px 38px rgba(0,0,0,0.30), 0px 0px 11px 0px rgba(0,0,0,0.22);
     }
     .overlay {
         border-radius: 50%;
         color: white;
-        height: 200px;
+        height: 150px;
         font-weight: bold;
-        width: 200px;
+        width: 150px;
         display: table;
         /*margin: 20px auto;*/
         position: absolute;
@@ -114,9 +113,18 @@ function topFunction() {
         </ul>
       </div>
     </div>
+    <?php
+        // displaying the details
+        
+         if(!empty($_POST['year']))
+         {
+           $year=$_POST['year'];
+         }
+        else $year=2017;
+    ?>
     <div id="titlebar">
       <div id="titlebartext">
-        Who we are
+        <?php echo "Team of ".$year." - ".($year+1); ?>
       </div>
     </div>
 
@@ -143,24 +151,38 @@ function topFunction() {
 
 
   <div class="container">
+        
       <div class="row">
-          <div class="col-md-4 block">
-              <div class="circle">
+      <?php
+            $sql= "select * from team_details where year='$year'";
+            
+            $result=mysqli_query($conn, $sql);
+              while($row=mysqli_fetch_array($result))
+              {
+                ?>
+          <div class="col-md-2 col-sm-3 block">
+              <div class="circle" style="background:url(<?php echo $row['imglink']?>) no-repeat center; background-size: contain; background-color: #ddd;">
                   <div class="overlay">
                     <p class="text">
+                      <a class="social" href="<?php echo $row['fblink']?>">
+                      <i style="color : #ffffff; font-size: 30px;" class="fa fa-facebook-official"></i></a>
                       <a class="social" href=#>
-                      <i style="color : #ffffff; font-size: 40px;" class="fa fa-facebook-official"></i></a>
-                      <a class="social" href=#>
-                      <i style="color : #ffffff; font-size: 40px;" class="fa fa-envelope"></i>
+                      <i style="color : #ffffff; font-size: 30px;" class="fa fa-envelope"></i>
                       </a>
                       <a class="social" href=#>
-                      <i style="color : #ffffff; font-size: 40px;" class="fa fa-twitter"></i>
+                      <i style="color : #ffffff; font-size: 30px;" class="fa fa-twitter"></i>
                       </a>
                     </p>
                 </div>
               </div>
-              <p>2</p>
+              <p>
+                <div><?php echo $row['name']?></div>
+                <div><?php echo $row['designation']?></div>
+              </p>
           </div>
+          <?php  
+        }
+        ?>
       </div>
   </div>
 
