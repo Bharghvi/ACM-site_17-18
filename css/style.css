@@ -44,11 +44,11 @@ body{
 	background: url('/img/acm1.png');
 }
 
-#acmtext{
+acmtext{
 	color: var(--color-blue);
 	text-align: center;
 	font-weight: 400;
-	font-size: 1.2em;
+	font-size: 1.3em;
 	padding: 0px 10px;
 	line-height: 100px;
 	float: left;
@@ -77,20 +77,22 @@ body{
   padding-top: 15px;
   padding-bottom: 15px;
 	height: auto;
-	font-size: 1em;
-	color: var(--color-grey);
+	font-size: 1.1em;
+	color: var(--color-blue);
 	text-decoration: none;
 }
 
-#navigationpanel li:active{
-	background: var(--color-grey);
-  color: white;
+#navigationpanel li:hover{
+  color: var(--color-blue);
+	background: var(--color-light-grey);
+  margin-left: -3px;
+	border-left: 3px solid var(--color-blue);
 }
 
-#navigationpanel li:hover{
-  color: var(--color-blue) !important;
-	background: var(--color-light-grey);
-	border-left: 3px solid var(--color-blue);
+#navigationpanel li.ac{
+	background: var(--color-medium-grey);
+  margin-left: -5px;
+	border-left: 5px solid var(--color-blue);
 }
 
 #titlebar{
