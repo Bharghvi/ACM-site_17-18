@@ -7,6 +7,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.mob_footer{
+  display: none;
+}
 body{
 	width: 100%;
 	min-width: 810px;
@@ -41,11 +44,11 @@ body{
 	background: url('/img/acm1.png');
 }
 
-#acmtext{
+acmtext{
 	color: var(--color-blue);
 	text-align: center;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 1.3em;
 	padding: 0px 10px;
 	line-height: 100px;
 	float: left;
@@ -74,20 +77,22 @@ body{
   padding-top: 15px;
   padding-bottom: 15px;
 	height: auto;
-	font-size: 15px;
-	color: var(--color-grey);
+	font-size: 1.1em;
+	color: var(--color-blue);
 	text-decoration: none;
 }
 
-#navigationpanel li:active{
-	background: var(--color-grey);
-  color: white;
+#navigationpanel li:hover{
+  color: var(--color-blue);
+	background: var(--color-light-grey);
+  margin-left: -3px;
+	border-left: 3px solid var(--color-blue);
 }
 
-#navigationpanel li:hover{
-  color: var(--color-blue) !important;
-	background: var(--color-light-grey);
-	border-left: 3px solid var(--color-blue);
+#navigationpanel li.ac{
+	background: var(--color-medium-grey);
+  margin-left: -5px;
+	border-left: 5px solid var(--color-blue);
 }
 
 #titlebar{
@@ -101,7 +106,7 @@ body{
 #titlebartext{
 	width: 800px;
 	padding-left: 150px;
-	font-size: 20px;
+	font-size: 1.2em;
 	line-height: 42px;
 	color: white;
 }
@@ -125,7 +130,7 @@ body{
 }
 
 #heading{
-	font-size: 25px;
+	font-size: 1.5em;
 	color: var(--color-blue);
 	padding: 5px 0;
 }
@@ -137,7 +142,7 @@ body{
 .member{
 	position: relative;
 	width: 200px;
-	font-size: 20px;
+	font-size: 1.2em;
 	color: #777;
 	display: inline-block;
 }
@@ -163,7 +168,7 @@ body{
 	position: relative;
 	height: 30px;
 	width: 100%;
-	font-size: 14px;
+	font-size: 0.9em;
 	color: #777;
 	text-align: center;
 	line-height: 30px;
@@ -173,7 +178,7 @@ body{
 	position: relative;
 	height: 40px;
 	width: 100%;
-	font-size: 12px;
+	font-size: 0.8em;
 	color: #777;
 	text-align: center;
 	line-height: 10px;
@@ -183,7 +188,7 @@ body{
 	position: relative;
 	height: 30px;
 	width: 100%;
-	font-size: 20px;
+	font-size: 1.2em;
 	color: #777;
 	text-align: center;
 	line-height: 30px;
@@ -239,7 +244,7 @@ body{
 
 .memberDataElement{
 	padding: 2px 5px;
-	font-size: 12px;
+	font-size: 0.9em;
 }
 
 .stripe_contact{
@@ -259,7 +264,7 @@ body{
 .custominput{
 	width: 300px;
 	height: 30px;
-	font-size: 15px;
+	font-size: 0.96em;
 	line-height: 30px;
 	color: #777;
 	margin: 2px;
@@ -273,7 +278,7 @@ body{
 	top: 50px;
 	right: 0;
 	width: 275px;
-	font-size: 15px;
+	font-size: 0.96em;
 	color: #777;
 }
 
@@ -374,20 +379,20 @@ body{
 
 #f1-data {
   padding: 20px 0px;
-  font-size: 14px;
+  font-size: 0.9em;
   line-height: 25px;
 }
 #tags {
   list-style: none;
   padding: 20px 0px;
-  font-size: 15px;
+  font-size: 0.9em;
   line-height: 30px;
 }
 
 #tags li a {
   text-decoration: none;
   color: #cbd1db;
-  font-size: 15px;
+  font-size: 0.9em;
 }
 
 #fb, #google {
@@ -406,7 +411,7 @@ hr{
 }
 
 .h3{
-  font-size: 15px;
+  font-size: 0.9em;
   margin: 0
 }
 
@@ -419,7 +424,7 @@ i {
 }
 
 p {
-font-size: 14px
+font-size: 0.85em
 }
 
 .copyleft {
@@ -429,7 +434,7 @@ text-align: center;
 padding-bottom: 20px;
 }
 p {
-font-size: 14px;
+font-size: 0.9em;
 text-align: justify;
 text-justify: inter-word;
 }
