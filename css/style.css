@@ -44,7 +44,7 @@ body{
 	background: url('/img/acm1.png');
 }
 
-acmtext{
+#acmtext{
 	color: var(--color-blue);
 	text-align: center;
 	font-weight: 400;
