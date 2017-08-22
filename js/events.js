@@ -1,15 +1,5 @@
 $(document).ready(function(){
 
-$(".eventsPoster").click(function(){
-	$(".hoverBack").fadeIn(800);
-	$(".hoverMain").fadeIn(800);
-	$(".hoverClose").fadeIn(800);
-	var source=$(this).children()[0].getAttribute('src');
-	$(".hoverImg").attr('src',source);
-	var title=$(this).children()[1].innerHTML;
-	$(".hoverTitle").html(title);
-	$('html, body').css({ 'overflow': 'hidden'});
-});
 
 $(".hoverClose,.hoverBack").click(function(){
 	$(".hoverBack").fadeOut(800);
@@ -46,3 +36,51 @@ $("#past2Menu").click(function(){
 });
 
 });
+
+function showDetailEvent(eventNumber)
+{
+	$(".hoverBack").fadeIn(800);
+	$(".hoverMain").fadeIn(800);
+	$(".hoverClose").fadeIn(800);
+	var source=document.getElementsByClassName('eventsPoster')[eventNumber].getElementsByTagName('img')[0].getAttribute('src');
+	$(".hoverImg").attr('src',source);
+	var title=document.getElementsByClassName('eventsPoster')[eventNumber].getElementsByTagName('h4')[0].innerHTML;
+	$(".hoverTitle").html(title);
+	$('html, body').css({ 'overflow': 'hidden'});
+
+	var mainInfoParent=document.getElementsByClassName('eventInfo')[0];
+
+	var date=mainInfoParent.getElementsByClassName('date')[0];
+	date.innerHTML="<span class=\"infoTitle\"><i class=\"fa fa-calendar\"></i> Date : </span>&nbsp;&nbsp;"+recentEventConfig[eventNumber]["date"];
+
+	var time=mainInfoParent.getElementsByClassName('timings')[0];
+	time.innerHTML="<span class=\"infoTitle\"> <i class=\"fa fa-clock-o\"></i> Timing : </span>&nbsp;&nbsp;"+recentEventConfig[eventNumber]["time"];
+
+	var venue=mainInfoParent.getElementsByClassName('venue')[0];
+	venue.innerHTML="<span class=\"infoTitle\"><i class=\"fa fa-map-marker\"></i> Venue : </span>&nbsp;&nbsp;"+recentEventConfig[eventNumber]["venue"];
+
+	var contactTable=mainInfoParent.getElementsByClassName('contactTable')[0];
+	contactTable.innerHTML='';
+	for(var i=0;i<recentEventConfig[eventNumber]["contactPerson"].length;i++)
+	{
+		tr=document.createElement('tr');
+		if(i==0)
+		{
+			td=document.createElement('td');
+			td.innerHTML="<span class=\"infoTitle\"><i class=\"fa fa-phone\"></i> Contact : </span>&nbsp;&nbsp;";
+			tr.appendChild(td);
+		}
+		else
+		{
+			td=document.createElement('td');
+			tr.appendChild(td);
+		}
+		td=document.createElement('td');
+		td.innerHTML=recentEventConfig[eventNumber]["contactPerson"][i]+" : "+recentEventConfig[eventNumber]["contactPersonPhone"][i];
+		tr.appendChild(td);
+		contactTable.appendChild(tr);
+	}
+
+	var details=mainInfoParent.getElementsByClassName('aboutEvent')[0];
+	details.innerHTML="<span class=\"infoTitle\">About : </span>"+recentEventConfig[eventNumber]["details"];
+}

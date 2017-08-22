@@ -9,8 +9,9 @@
 
 body{
 	width: 100%;
-	min-width: 810px;
+	/*min-width: 810px;*/
 	height: auto;
+	overflow-x: hidden;
 }
 
 #thecontainer{
