@@ -1,130 +1,216 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>NIT Surat ACM</title><meta charset="utf-8" />
-		<link href="css/style.css" rel="stylesheet" />
-		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
-		<script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    	<div id="thecontainer">
-			<div id="logohead" class="middle">
-				<div id="acmlogo">
-				</div>
-				<div id="acmtext">
-					NIT Surat ACM Chapter
-				</div>
-				<div id="svnitlogo">
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="fullhr"></div>
-			<div id="headerblock" class="middle">
-				<ul id="navigationpanel">
-					<li id="0" class="navitems"><a href="./index.php">Home</a></li>
-					<li id="1" class="navitems"><a href="./events.php">Events</a></li><!-- place event archives here as well -->
-					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
-					<li id="3" class="navitems"><a href="./about.php">About</a></li>
-					<li id="4" class="navitems"><a href="./projects.php">Projects</a></li>
-					<li id="5" class="navitems"><a href="./contact.php">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-    	<div class="datablock middle">
-    		<div class="heading">
-    			We are here
-    		</div>
-    		<iframe width="800" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-    	</div>
-    	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-    	<div class="datablock middle">
-    		<div class="heading">
-    			Say something
-    		</div>
-    		<div class="content">
-    			<form action="saySomething.php" method="POST">
-    				<span class="member saySomethingColumn1">
-    					Name:
-    				</span>
-    				<span>
-    					<input type="text" name="name" class="custominput" />
-    				</span>
-    				<br />
-    				<span class="member saySomethingColumn1">
-    					E-mail *:
-    				</span>
-    				<span>
-    					<input type="email" name="email" required class="custominput" />
-    				</span>
-    				<br />
-    				<div style="position:relative">
-    					<span class="member saySomethingColumn1" style="position:absolute;top:0">
-    						Message *:
-    					</span>
-    					<textarea rows="5" cols="40" wrap="physical" name="message" required class="custominput saySomethingTextBox">
-    					</textarea>
-    				</div>
-    				<span style="position:relative;left:105px">
-    					<input id="saySomethingSubmit" type="submit" value="Submit" />
-    				</span>
-    			</form>
-    			<div id="addresscontainer">
-    				<b>
-    					Snail Mail:
-    				</b>
-    				<br />
-    				ACM NIT Surat Chapter,
-    				<br />
-    				Computer Engineering Department,
-    				<br />
-    				SVNIT Surat,
-    				<br />
-    				Ichchhanath, Surat - 395007
-    				<br /><br />
-    				<b>
-    					Email:
-    				</b>
-    				<br />
-    				admin@nitsurat.acm.org
-    			</div>
-    		</div>
-    	</div>
+    <head>
+        <meta charset="utf-8">
+        <title>NIT Surat ACM</title>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/style.css" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+        <!-- <link rel="stylesheet" href="css/event.css"> -->
+        <!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
 
-    <?php
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
 
-    include_once('footer.php');
-
-    ?>
-
-    <div id="thefooter">
-        <div class="middle" style="width: 800px">
-          <span id="copyleft"><img src="./img/copyleft.png" alt="Copyleft symbol" title="Copyleft" width="16" height="16" style="position: relative;top: 4px;padding: 2px" />Copyleft ACM NIT Surat.</span>
-          <div id="extlinks">
-            External Links :<br />
-            <a href="http://www.svnit.ac.in" target="_blank" title="SVNIT Surat Homepage">
-              SVNIT Surat
-            </a><br />
-            <a href="//nitsurat.acm.org/forum" target="_blank" title="ACM SVNIT Forum">
-              Forum @ ACM SVNIT
-            </a><br />
-            <a href="//nitsurat.acm.org/chat/a/" target="_blank" title="ACM SVNIT Forum">
-              Find someone online
-            </a>
-          </div>
-
-          <div id="plugins">
-            <span><a id="fb" target="_blank" href="https://www.facebook.com/acmnitsurat/" title="ACM SVNIT Facebook Page"></a></span>
-            <span><a id="t" target="_blank" href="https://www.twitter.com/acmnitsurat/" title="Follow ACM SVNIT on Twitter"></a></span>
-            <span><a id="gp" target="_blank" href="https://plus.google.com/102663242082547358717" title="ACM SVNIT Google+ Profile"></a></span>
-          </div>
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <style type="text/css">
+          body{
+            font-size: 0.85em;
+          }
+            .contact{
+            box-sizing: border-box !important;
+            border: 2px solid #ccc;
+            border-radius: 0 !important;
+            transition: 0.5s;
+            margin: 5px;
+            }
+            .contact:focus{
+            border: 2px solid #0c264f;
+            }
+            .contact_button{
+            background-color: #ffffff;
+            color: black;
+            border: 2px solid #0c264f;
+            padding: 5px 20px;
+            }
+            .contact_button:hover{
+            background-color: #0c264f;
+            color: white;
+            padding: 5px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" style="color: white; font-size: 25px"></i></button>
+        <div id="thecontainer">
+            <div id="logohead" class="middle">
+                <div >
+                    <img id="acmlogo" src="img/resized_logo.png" alt="">
+                </div>
+                <div id="acmtext">
+                    Association for Computing Machinery NIT Surat Student Chapter
+                </div>
+                <div >
+                    <img  id="svnitlogo" src="img/svnit-logo.png" alt="">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="fullhr"></div>
+            <div id="headerblock" class="middle">
+                <ul id="navigationpanel">
+                    <li id="0" class="navitems"><a href="./index.html">Home</a></li>
+                    <li id="1" class="navitems"><a href="./events.html">Events</a></li>
+                    <!-- place event archives here as well -->
+                    <li id="2" class="navitems"><a href="./team.php">Team</a></li>
+                    <li id="4" class="navitems"><a href="./projects.html">Projects</a></li>
+                    <li id="ac" class="navitems"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <noscript style="position: absolute;top: 0;height: auto; width: 100%;background: #f00;text-align: center;color: #fff">This site uses JavaScript for its normal functioning. You may experience trouble navigating at this page. Open the lite version <a href="http://nitsurat.acm.org/lite/">here</a>.
-      </noscript>
-      <script src="js/data.js"></script>
-      <script src="js/main.js"></script>
-      <script src="js/memberData.js"></script>
-  </body>
+        <div id="titlebar">
+            <div id="titlebartext">
+                Get In Touch
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row" style="margin: 15px; margin-top: 50px; margin-bottom: 50px;" >
+                <div class="col-md-6">
+                    <form class="form-horizontal" role="form" action="saySomething.php" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">
+                            Name
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control contact" id="name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">
+                            Email
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control contact" id="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="col-sm-2 control-label">
+                            Message
+                            </label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control contact" rows="5" id="message" name="message" required></textarea>
+                                <!-- <input type="email" class="form-control" id="message"> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10" style="text-align: center;">
+                                <button type="submit" class="contact_button">
+                                Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card " style="display: inline-block; border: 2px solid #0c264f; padding-bottom: 10px; width: 80%; box-shadow: 0 10px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);">
+                            <div class="card-block">
+                                <h3 class="card-title">Snail Mail</h3>
+                                <img class="card-img-left" src="img/mail-box.png" align="right">
+                                <p class="card-text" style="font-size: large;">ACM NIT Surat Chapter,
+                                    <br />
+                                    Computer Engineering Department,
+                                    <br />
+                                    SVNIT Surat,
+                                    <br />
+                                    Ichchhanath, Surat - 395007
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card" style="display: inline-block; border: 2px solid #0c264f; padding-bottom: 10px; width: 80%; box-shadow: 0 10px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);">
+                            <div class="card-block">
+                                <h3 class="card-title">Email</h3>
+                                <img class="card-img-left" src="img/email1.png" align="right">
+                                <p class="card-text" style="font-size: large;">acmnitsurat@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="google-map-header-bottom">
+            <div class="row-fluid">
+                <iframe width="100%" height="400" frameborder="0" style="border:0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233&amp;output=embed" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="f1">
+                <h3 style="font-size: 18px; margin: 0">ACM - NIT,  SURAT</h3>
+                <br>
+                <hr class="hr">
+                <p id="f1-data">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <h4>Get Social</h4>
+                <a class="social" href="https://www.facebook.com/acmnitsurat">  <i style="color : #3B5998; font-size: 1.5em;margin-top: 20px" class="fa fa-facebook-square"></i></a>
+
+     <a class="social" href="mailto:acmnitsurat@gmail.com"><i style="color: #d34836; font-size: 1.5em;margin-top: 20px" class="fa fa-google"></i></a>
+
+    <a class="social" href="https://twitter.com/acmnitsurat"><i style="color: #4099ff; font-size: 1.5em;margin-top: 20px" class="fa fa-twitter"></i></a>
+            </div>
+            <div class="f2">
+                <h3 style="font-size: 18px; margin: 0">QUICK LINKS</h3>
+                <br>
+                <hr class="hr">
+                <ul id="tags">
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./events.html">Events</a></li>
+                  <li><a href="./team.php">Team</a></li>
+                  <li><a href="./projects.html">Projects</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="f3">
+                <h3 style="font-size: 18px; margin: 0">CONTACT</h3>
+                <br>
+                <hr class="hr">
+                <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
+                <p>SVNIT, Ichchhanth, Surat - 395 007</p>
+                <br>
+                <i class='fa fa-envelope' style="color: #cbd1db"></i>
+                <p>acmnitsurat@gmail.com</p><br>
+                <br>
+                <i class='fa fa-mobile' style="color: #cbd1db"></i>
+                <p>SVNIT, Ichchhanth, Surat - 395 007</p>
+            </div>
+        </div>
+        <div class="copyleft"><i class="fa fa-copyright fa-flip-horizontal"></i>
+            Copyleft ACM NIT SURAT
+        </div>
+        <script src="js/data.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/memberData.js"></script>
+    </body>
 </html>

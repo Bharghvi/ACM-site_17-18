@@ -3,160 +3,200 @@
   <head>
     <meta charset="utf-8">
     <title>NIT Surat ACM</title><meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="css/style.css" rel="stylesheet" />
 		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
-		<script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/eventProject.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+    <script type="text/javascript" src="js/events.js"></script>
+
+    <style media="screen">
+
+    /*body{
+      font-style: 'Roboto' sans-serif;
+      font-size: 0.85em;
+    }
+*/
+    *{
+      font-family: 'Roboto', sans-serif;
+    }
+    @media only screen and (max-width: 500px) {
+
+      .body {
+        width: auto !important;
+      }
+
+      #svnitlogo , #acmlogo{
+        height: 60px;
+        width: 60px;
+        float: left;
+      }
+    }
+    </style>
+    <script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
   </head>
   <body>
-    	<div id="thecontainer">
-			<div id="logohead" class="middle">
-				<div id="acmlogo">
-				</div>
-				<div id="acmtext">
-					NIT Surat ACM Chapter
-				</div>
-				<div id="svnitlogo">
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="fullhr"></div>
-			<div id="headerblock" class="middle">
-				<ul id="navigationpanel">
-					<li id="0" class="navitems"><a href="./index.php">Home</a></li>
-					<li id="1" class="navitems"><a href="./events.php">Events</a></li><!-- place event archives here as well -->
-					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
-					<li id="3" class="navitems"><a href="./about.php">About</a></li>
-					<li id="4" class="navitems"><a href="./projects.php">Projects</a></li>
-					<li id="5" class="navitems"><a href="./contact.php">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-    <?php
-
-    include_once('header.php');
-
-    ?>
-
-
-    		<div id="titlebartext" class="middle">
-    			Android Application Development
-    		</div>
-    	<div class="datablock middle">
-    		<div class="heading">
-    			ACM NIT Surat's Android App *
-    		</div>
-    		<div class="content">
-    			This project aims at building an android app for the chapter, having the following features:<br />
-    			a)Details (area of expertise) and contact info of the current and previous committee members<br />
-    			b)Implementation of a notification system of upcoming events and workshops<br />
-    			c)A suggestions tab where students can suggest events and workshops and give ideas on improving ACM<br />
-    			d)A query page where students can ask questions related to workshops, events, or any programming concepts in general.<br />
-    			<br />
-    			Feel free to suggest something that you may like to change.<br />
-    			<b>Pre-requisites:</b> Basic knowledge of Android and Java.<br />
-    			<b> Difficulty:</b> Medium<br />
-    			<b>Mentor(s): Jay Panchal</b>, jaypanchal33 at yahoo dot com <br />
-    		</div>
-    	</div>
-    		<div id="titlebartext" class="middle">
-    			Web Development
-    		</div>
-    	<div class="datablock middle">
-    		<div class="heading">
-    			Improve this Web Site *
-    		</div>
-    		<div class="content">
-    			This project aims at improving the web site for the chapter, including but not limited to redesign, feature addition as implementation of client-based notification of upcoming events, improving page load speeds, a better and fool proof "Contact Form" and similar features. <br />
-    			Feel free to suggest something that you may like to have changed. <br />
-    			<b>We would like to shift to python structure, get your ideas/suggestions heard<br /></b>
-    			<b>Pre-requisites:</b> Basic knowledge of HTML, CSS and JavaScript. <br />
-    			<b>Bonus points:</b> Have programmed earlier in JavaScript, some live project to show, good proficiency in Python<br />
-    			<b> Difficulty:</b> Medium<br />
-    			<b>Mentor(s): Palash Oswal</b>, oswalpalash at gmail dot com
-    		</div>
-    	</div>
-    	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-    	<div class="datablock middle">
-    		<div class="heading">
-    			Simpler information upload mechanism*
-    		</div>
-    		<div class="content">
-    			Current data update policy for the Web Site involves logging into cPanel for access to server, and then changing each and every file. A better visualized system would require a minimal login through the home page, an event type, a layout selection and data to be filled in making the job of Web Developer easier and making the process decentralized.<br />
-    			<b>Pre-requisites:</b> Basic knowledge of JavaScript and PHP.<br />
-    			<b>Bonus points:</b> Have programmed earlier on the beckend, knowledge of system admin panel, like cPanel or similar<br />
-    			<b> Difficulty:</b> Medium+<br />
-    			<b>Mentor(s): Palash Oswal</b>, oswalpalash at gmail dot com
-    		</div>
-    	</div>
-    	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-    	<div class="datablock middle">
-    		<div class="heading">
-    			A blog for each of the committee members, http://nitsurat.acm.org/[memberAlias]/ *
-    		</div>
-    		<div class="content">
-    			It will be easier and faster for Juniors and others to get in touch and it will also help in promoting the motto of the Chapter to disseminate knowledge and increase involvement in Computing.<br />
-    			Current ongoing work is happening at <a href="https://github.com/gargsms/leaf">leaf</a> (at a snail's pace maybe). You may want to help there.<br />
-    			<b>Pre-requisites:</b> Basic knowledge of PHP, version control systems.<br />
-    			<b>Bonus points:</b> More than sufficient proficiency with Linux, knowledge of git-scm or similar<br />
-    			<b> Difficulty:</b> Hard<br />
-    			<b>Mentor(s): 1. Umang Singhal</b>,<br />
-    			<b>2. Palash Oswal</b>, oswalpalash at gmail dot com
-    		</div>
-    	</div>
-    	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-    	<div class="datablock middle">
-    		<div class="heading">
-    			Set up a mail server, and a mailing list for the chapter *
-    		</div>
-    		<div class="content">
-    			Simple, quick and easy method to mail all the participants of an event. No more digging into all the records.<br />
-    			<b>Pre-requisites:</b> Knowledge of System Administration, Linux<br />
-    			<b> Difficulty:</b> Easy<br />
-    			<b>Mentor(s): 1. Umang Singhal</b>,<br />
-    			<b>2. Palash Oswal</b>, oswalpalash at gmail dot com
-    		</div>
-    	</div>
-
-    	<div class="datablock middle">
-    		<small>
-    			* - indicates a project yet to be undertaken <br />
-    			All these projects will be publicly available in sub-directories of <a href="/projects/">./projects</a> folder. The source code shall be licensed free and open.<br />
-    			Want to propose a project, drop an email on admin@nitsurat.acm.org, or want to start at one, contact the respective mentors.
-    		</small>
-    	</div>
-    <?php
-
-    include_once('footer.php');
-
-    ?>
-    <div id="thefooter">
-        <div class="middle" style="width: 800px">
-          <span id="copyleft"><img src="./img/copyleft.png" alt="Copyleft symbol" title="Copyleft" width="16" height="16" style="position: relative;top: 4px;padding: 2px" />Copyleft ACM NIT Surat.</span>
-          <div id="extlinks">
-            External Links :<br />
-            <a href="http://www.svnit.ac.in" target="_blank" title="SVNIT Surat Homepage">
-              SVNIT Surat
-            </a><br />
-            <a href="//nitsurat.acm.org/forum" target="_blank" title="ACM SVNIT Forum">
-              Forum @ ACM SVNIT
-            </a><br />
-            <a href="//nitsurat.acm.org/chat/a/" target="_blank" title="ACM SVNIT Forum">
-              Find someone online
-            </a>
-          </div>
-
-          <div id="plugins">
-            <span><a id="fb" target="_blank" href="https://www.facebook.com/acmnitsurat/" title="ACM SVNIT Facebook Page"></a></span>
-            <span><a id="t" target="_blank" href="https://www.twitter.com/acmnitsurat/" title="Follow ACM SVNIT on Twitter"></a></span>
-            <span><a id="gp" target="_blank" href="https://plus.google.com/102663242082547358717" title="ACM SVNIT Google+ Profile"></a></span>
-          </div>
-        </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" style="color: white; font-size: 25px"></i></button>
+    <div id="thecontainer">
+    <div id="logohead" class="middle">
+      <div >
+        <img id="acmlogo" src="img/resized_logo.png" alt="">
       </div>
-      <noscript style="position: absolute;top: 0;height: auto; width: 100%;background: #f00;text-align: center;color: #fff">This site uses JavaScript for its normal functioning. You may experience trouble navigating at this page. Open the lite version <a href="http://nitsurat.acm.org/lite/">here</a>.
-      </noscript>
-      <script src="js/data.js"></script>
+      <div id="acmtext">
+        Association for Computing Machinery NIT Surat Student Chapter
+      </div>
+      <div >
+        <img  id="svnitlogo" src="img/svnit-logo.png" alt="">
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="fullhr"></div>
+    <div id="headerblock" class="middle">
+      <ul id="navigationpanel">
+        <li id="0" class = "ac"><a href="index.html">Home</a></li>
+        <li id="1" ><a href="events.html">Events</a></li><!-- place event archives here as well -->
+        <li id="2"><a href="team.php">Team</a></li>
+        <li id="ac"><a href="projects.html">Projects</a></li>
+        <li id="5"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+    <div id="titlebar">
+      <div id="titlebartext">
+        Projects
+      </div>
+    </div>
+
+    <div class="holder">
+      <div class="hrow">
+          <div class="vcol-12 vcol-md-12 vcol-sl-12">
+            <div class="projectDiv">
+              <h3>ACM NIT Surat's Android App *</h3>
+              <p><span class="projectTitles">Details : </span>This project aims at building an android app for the chapter, having the following features:
+              a)Details (area of expertise) and contact info of the current and previous committee members
+              b)Implementation of a notification system of upcoming events and workshops
+              c)A suggestions tab where students can suggest events and workshops and give ideas on improving ACM
+              d)A query page where students can ask questions related to workshops, events, or any programming concepts in general.</p>
+              <p><span class="projectTitles">Pre - Requisites : </span>Basic knowledge of Android and Java.</p>
+              <p><span class="projectTitles">Difficulty : </span>Medium</p>
+              <p><span class="projectTitles">Mentor(s) : </span>Deepanshu Sharma&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i> acmnitsurat@gmail.com</p>
+            </div>
+
+            <div class="projectDiv">
+              <h3>Improve this Web Site *</h3>
+              <p><span class="projectTitles">Details : </span>This project aims at improving the web site for the chapter, including but not limited to redesign, feature addition as implementation of client-based notification of upcoming events, improving page load speeds, a better and fool proof "Contact Form" and similar features. 
+              Feel free to suggest something that you may like to have changed.<br><strong>We would like to shift to python structure, get your ideas/suggestions heard</strong> </p>
+              <p><span class="projectTitles">Pre - Requisites : </span>Basic knowledge of HTML, CSS and JavaScript.</p>
+              <p><span class="projectTitles">Bonous Points : </span>Have programmed earlier on the beckend, knowledge of system admin panel, like cPanel or similar</p>
+              <p><span class="projectTitles">Difficulty : </span>Medium +</p>
+              <p><span class="projectTitles">Mentor(s) : </span>Deepanshu Sharma&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i> acmnitsurat@gmail.com</p>
+            </div>
+
+            <div class="projectDiv">
+              <h3>Simpler information upload mechanism *</h3>
+              <p><span class="projectTitles">Details : </span>Current data update policy for the Web Site involves logging into cPanel for access to server, and then changing each and every file. A better visualized system would require a minimal login through the home page, an event type, a layout selection and data to be filled in making the job of Web Developer easier and making the process decentralized.</p>
+              <p><span class="projectTitles">Pre - Requisites : </span>Basic knowledge of JavaScript and PHP.</p>
+              <p><span class="projectTitles">Bonous Points : </span> Have programmed earlier in JavaScript, some live project to show, good proficiency in Python</p>
+              <p><span class="projectTitles">Difficulty : </span>Medium</p>
+              <p><span class="projectTitles">Mentor(s) : </span>Deepanshu Sharma&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i> acmnitsurat@gmail.com</p>
+            </div>
+
+            <div class="projectDiv">
+              <h3>A blog for each of the committee members, http://nitsurat.acm.org/[memberAlias]/ *</h3>
+              <p><span class="projectTitles">Details : </span>It will be easier and faster for Juniors and others to get in touch and it will also help in promoting the motto of the Chapter to disseminate knowledge and increase involvement in Computing.
+              Current ongoing work is happening at leaf (at a snail's pace maybe). You may want to help there.</p>
+              <p><span class="projectTitles">Pre - Requisites : </span>Basic knowledge of PHP, version control systems.</p>
+              <p><span class="projectTitles">Bonous Points : </span> More than sufficient proficiency with Linux, knowledge of git-scm or similar</p>
+              <p><span class="projectTitles">Difficulty : </span>Hard</p>
+              <p><span class="projectTitles">Mentor(s) : </span>Deepanshu Sharma&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i> acmnitsurat@gmail.com</p>
+            </div>
+
+            <div class="projectDiv">
+              <h3>Set up a mail server, and a mailing list for the chapter *</h3>
+              <p><span class="projectTitles">Details : </span>Simple, quick and easy method to mail all the participants of an event. No more digging into all the records.</p>
+              <p><span class="projectTitles">Pre - Requisites : </span>Knowledge of System Administration, Linux</p>
+              <p><span class="projectTitles">Difficulty : </span>Easy</p>
+              <p><span class="projectTitles">Mentor(s) : </span>Deepanshu Sharma&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i> acmnitsurat@gmail.com</p>
+            </div>
+
+            <hr>
+            <div class="footerNotes">
+              <p>* - indicates a project yet to be undertaken<br>
+              All these projects will be publicly available in sub-directories of ./projects folder. The source code shall be licensed free and open.<br>
+              Want to propose a project, drop an email on admin@nitsurat.acm.org, or want to start at one, contact the respective mentors.</p>
+            </div>
+
+          </div>
+      </div>
+    </div>
+
+    <div class="footer-content">
+  	  <div class="f1">
+  	    <h3 style="font-size: 1.15em; margin: 0">ACM - NIT,  SURAT</h3>
+  	    <br>
+  	  <hr class="hr">
+  	  <p id="f1-data">ACM NIT-Surat is a student chapter highly focused on planning and organising events for coding, development, design, etc.</p>
+  	  <h4>Get Social</h4>
+  	    <a class="social" href="https://www.facebook.com/acmnitsurat">  <i style="color : #3B5998; font-size: 1.5em;margin-top: 20px" class="fa fa-facebook-square"></i></a>
+
+     <a class="social" href="mailto:acmnitsurat@gmail.com"><i style="color: #d34836; font-size: 1.5em;margin-top: 20px" class="fa fa-google"></i></a>
+
+    <a class="social" href="https://twitter.com/acmnitsurat"><i style="color: #4099ff; font-size: 1.5em;margin-top: 20px" class="fa fa-twitter"></i></a>
+  	    </div>
+  	  <div class="f2">
+  	    <h3 style="font-size: 1.15em; margin: 0">QUICK LINKS</h3>
+  	    <br>
+  	    <hr class="hr">
+  	    <ul id="tags">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./team.php">Team</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+  	  </div>
+  	  <div class="f3">
+  	    <h3 style="font-size: 1.15em; margin: 0">CONTACT</h3>
+  	    <br>
+  	    <hr class="hr">
+  	    <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
+  	    <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
+  	    <i class='fa fa-envelope' style="color: #cbd1db"></i>
+  	    <p>acmnitsurat@gmail.com</p><br>
+  	    <i class='fa fa-mobile' style="color: #cbd1db"></i>
+  	    <p>SVNIT, Ichchhanth, Surat - 395 007</p>
+
+  	  </div>
+    </div>
+    <div class="copyleft"><i class="fa fa-copyright fa-flip-horizontal"></i>
+      Copyleft ACM NIT SURAT
+    </div>
+      <!-- <script src="js/data.js"></script> -->
       <script src="js/main.js"></script>
-      <script src="js/memberData.js"></script>
+      <!-- <script src="js/memberData.js"></script> -->
   </body>
 </html>

@@ -7,15 +7,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="css/style.css" rel="stylesheet" />
 		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
-        <link rel="stylesheet" href="css/event.css">
+        <link rel="stylesheet" href="css/eventProject.css">
 		<!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+      <meta name="viewport" content="width=device-width">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
+<style media="screen">
+
+@media only screen and (max-width: 500px) {
+
+  .body {
+    width: auto !important;
+  }
+
+  #about{
+    padding: 0px;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+  }
+
+  #svnitlogo , #acmlogo{
+    height: 60px;
+    width: 60px;
+    float: left;
+  }
+}
+</style>
     <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -54,8 +75,8 @@ function topFunction() {
 			<div id="headerblock" class="middle">
 				<ul id="navigationpanel">
 					<li id="0" class="navitems"><a href="./index.html">Home</a></li>
-					<li id="1" class="navitems"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
-					<li id="2" class="navitems"><a href="./team.html">Team</a></li>
+					<li id="ac" class="navitems"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
+					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
 					<li id="4" class="navitems"><a href="./projects.html">Projects</a></li>
 					<li id="5" class="navitems"><a href="./contact.html">Contact</a></li>
 				</ul>
@@ -63,250 +84,84 @@ function topFunction() {
 		</div>
     <div id="titlebar">
       <div id="titlebartext">
-        Events
+        Upcoming Events
       </div>
     </div>
 
-    <div id="canvas">
-        <div class="member_box">
-
-        <div style="display: flex"><img src="img/icpc.jpe" class="member_photo" id="first">
-        <div style="display: flex; flex-direction: column; justify-content: center">	<span class="member_name" id="1">Joey</span>
-            <span class="member_description">Joey is our man man. He works close with the developer team to ensure quality.</span>
+    <div class="hoverBack"></div>
+    <div class="hoverMain holder">
+      <div class="hrow hoverRow">
+        <div class="vcol-6 vcol-md-12 vcol-sl-12">
+          <img src="img/events/inception.jpg" class="hoverImg">
         </div>
+        <div class="vcol-6 vcol-md-12 vcol-sl-12 eventInfo">
+          <h2 class="hoverTitle"></h2><hr>
+          <h5 class="date"></h5>
+          <h5 class="timings"></h5>
+          <h5 class="venue"></h5>
+          <table class="contactTable"></table>
+          <p class="aboutEvent"></p>
         </div>
-        <hr class="border">
-        <div style="display: flex"><img src="img/AMOC.jpg" class="member_photo" id="second">
-            <div style="display: flex; flex-direction: column; justify-content: center">
-                <span class="member_name" id="2">Karl</span>
-                <span class="member_description">Karl is typically half asleep on the job so he is our coffee boy.</span>
-        </div></div>
-        <hr class="border">
-        <div style="display: flex"><img src="img/inter.jpg" class="member_photo" id="third">
-            <div style="display: flex; flex-direction: column; justify-content: center">
-                <span class="member_name" id="3">Bobby</span>
-                <span class="member_description">Bobby keeps everything afloat. Bobby can do anything you ask. He enjoys summer nights and fishing.</span>
-            </div></div>
-            <hr class="border">
-
-        <div style="display: flex"><img src="img/Ep.jpg" class="member_photo" id="fourth">
-            <div style="display: flex; flex-direction: column; justify-content: center">
-                <span class="member_name" id="4">Ray</span>
-                <span class="member_description">Ray is a spastic maniac who is a great coder, although he much prefers to be not be disturbed.</span>
-
-        </div></div>
-        <hr class="border">
-        <div style="display: flex"><img src="img/ori.jpg" class="member_photo" id="sixth">
-            <div style="display: flex; flex-direction: column; justify-content: center">
-                <span class="member_name" id="6">Elon</span>
-                <span class="member_description">Elon lives to draw, paint and design. So he is our wonderful chef.</span>
-                </div></div>
-                <hr class="border">
-        <div style="display: flex"><img src="img/code.jpg" class="member_photo" id="fifth">
-            <div style="display: flex; flex-direction: column; justify-content: center">
-                <span class="member_name" id="5">Hugh</span>
-                <span class="member_description">Hugh is our customer consultant and takes a great amount of pride in incrementing his street credit.</span>
-            </div></div>
-</div>
-
-    </div>
-      	<div class="datablock middle">
-  	    <div id="heading">
-  	    	Hackathon - InOut
-  	    </div>
-  	    <div id="content">
-  		Industries have now adopted better ways to identify the best programmers and good talent through events like online competitive contests and hackathons.<br/>
-  		Hackathons remain the best means to bring up talented minds together and build great apps and projects within very short time.<br/>
-  		Hence, to give students an insight into such events and to let them showcase their talent, ACM NIT Surat decides to conduct Hackathon this time. It will surely increase the number of innovative projects which come up from the students from any technical institute like NIT Surat.<br/>
-  		Conducted the Hackathon named “InOut” with other technical clubs at NIT Surat.<br/>
-  		There were huge sponsors for the event and it was the foremost Hackathon taking place in the college.<br/>
-  		Follow the website : <a href="http://inout.webdevlabs.in/" target="_blank">InOut</a>
-  	    </div>
-  	  </div>
-
-      <hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	  <div class="datablock middle">
-  	    <div id="heading">
-  	      Epiphany Series - <i>A competitive programming contest series</i>
-  	    </div>
-  	    <div id="content">
-  		Computer engineering students always want to improve their programming skills. And they love a platform where they can showcase their coding logic.<br/>
-  		And why not do coding to get attractive prizes and cool T-shirts than doing boring assignments?</br>
-  		So, ACM NIT Surat organized 6 contests from Epiphany 4.0 to 4.5 this years in the famous "Epiphany Series" and coders from all around the globe came in to participate.<br/>
-  		The series not only helped students practice their skills before going for <a href="http://icpc.baylor.edu/" target="_blank">ACM International Collegiate Programming Contest (ICPC)</a> but also made students from all other branches to do programming for fun and learning.<br/>
-  		&nbsp;&nbsp;&nbsp;&nbsp;<small><i>Winners are posted on ACM NIT Surat Facebook Page.</i></small><br/>
-  	    </div>
-  	  </div>
-
-      <hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-    	<div class="datablock middle">
-      		<div id="heading">ACM Hour of Code</div>
-  	    <div id="content">
-  		Code.org decided to organize "Hour of Code" where all do programming for an hour.<br/>
-  		ACM NIT Surat decided to join and went to local schools to promote computing and programming by conducting this "Hour of Code".<br/>
-  	    </div>
-  	</div>
-
-    <hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-    <div class="datablock middle">
-      <div id="heading">
-        Workshop on Starting with Open Source Development
-      </div>
-      <div id="content">
-        Open Source! The phrase sparks ideas, and brightens the day of every geek.<br />
-        Deepen this love, and learn how to contribute to Open Source Development.<br />
-        Come, get a basic idea about Open Source, kill your Myths, and start writing code. More on GSoC and getting started.<br /><br />
-        Download the presentations and other material here: <a href="//nitsurat.acm.org/files/FOSS-Workshop.zip">here</a><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<small><i>Day 1 presentation opens in a browser, just double-click the index.html file</i></small>
       </div>
     </div>
+    <div class="hoverClose"><i class="fa fa-close"></i></div>
 
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			ACM Fair 2014
-  		</div>
-  		<div id="content">
-  			The biggest extravaganza of even semester.<br />
-  			Create applications, gain fame, and win prizes.<br /><br />
-  			For more info, visit <a href="http://nitsurat.acm.org/fair/">ACM Fair 2014</a> web page.
-  		</div>
-  	</div>
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			Game Development Workshop
-  		</div>
-  		<div id="content">
-  			Did someone think that the (geeky) ACM people never do gaming?<br />
-  			We do. We develop them as well. And now, you can learn how to.<br />
-  			Come and learn how to design and create your own games right from the scratch.<br /><br />
-  			Download the Introduction project <a href="//nitsurat.acm.org/files/Intro2.zip">here</a>.<br />
-  			Download Schoopter game <a href="//nitsurat.acm.org/files/Schpooter.zip">here</a>.<br />
-  			Download Texture generator <a href="//nitsurat.acm.org/files/Filter_Forge_4.008.zip">here</a>.<br />
-  			Download Sound generator <a href="//nitsurat.acm.org/files/sfxr.zip">here</a>.
-  		</div>
-  	</div>
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			Java and Android Application Development Workshop
-  		</div>
-  		<div id="content">
-  			You must be using Android Applications daily. No one misses WhatsApp. But, ever wondered how Android Applications are made.<br />
-  			Well, now you have a chance to learn making one. Come and learn the basics of Java and using it in Android Application Development.<br /><br />
-  			Download Day 1 Java Workshop material <a href="//nitsurat.acm.org/files/Java Workshop.zip">here</a>. [zip, 275KB]<br />
-  			Download Day 2 and 3 Android Application Development Workshop material <a href="//nitsurat.acm.org/files/Android Workshop.zip">here</a>. [zip, 32MiB]
-  		</div>
-  	</div>
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			Web Development Workshop
-  		</div>
-  		<div id="content">
-  			A workshop targetting anyone who uses Web.<br />
-  			A three day workshop providing ample guidance to start out as a Web Developer.<br /><br />
-  			Download Day 1 presentation <a href="../files/Web Development Day 1.zip">here</a>.<br />
-  			Shoot your doubts here: garg_sms at yahoo.in
-  		</div>
-  	</div>
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			Epiphany 3.0, 3.1, and 3.2
-  		</div>
-  		<div id="content">
-  			This competitive coding contest from ACM NIT Surat chapter brings in huge participation.<br />
-  			The nerve frightening, and sometimes hilarious problem statements sets it apart from the crowd.<br />
-  			Experience it in the next edition as Epiphany 3.3 (coming soon.)
-  		</div>
-  	</div>
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			TechIQ 1 and 2
-  		</div>
-  		<div id="content">
-  			Mainly targetted at checking the technical know-how of the freshers.<br />
-  			Comprising of technical, logical, and programming questions that check you to the fullest, this event is widely popular.<br />
-  			Plus, prizes.
-  		</div>
-  	</div>
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			ACM Quest 2013
-  		</div>
-  		<div id="content">
-  			The main attraction of the odd semester, this contains a plethora of events from quizzes to hackathons.<br /><br />
-  			For more info, visit <a href="http://nitsurat.acm.org/quest/">ACM Quest 2013</a> web page.
-  		</div>
-  	</div>
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			Competitive Coding Workshop
-  		</div>
-  		<div id="content">
-  			Aim was to prepare the freshers for coding competitions like ICPC, Codejam, and others.<br />
-  			Coding best practices, algorithms, and problem tackling were mainly discussed.
-  		</div>
-  	</div>
-  	<hr class="middle" style="width:800px;border:1px solid #EEEEEE" />
-  	<div class="datablock middle">
-  		<div id="heading">
-  			Basic C Workshop
-  		</div>
-  		<div id="content">
-  			First event in the year, it was a boon to the freshers. It helped them understand and grasp the basic concepts of programming in general.<br />
-  			Since ANSI C is a part of the freshmen curriculum, as expected, there was a huge turnout.
-  		</div>
-  	</div>
+    <div class="holder">
+      <div class="hrow" id="recentEvents"></div>
+    </div>
 
+    <div id="past1Menu" class="pastEventMenus">
+      <div>
+        Events of 2016-2017 Year
+      </div>
+    </div>
+    <div id="past1" class="holder">
+      <div class="hrow" id="pastEvents1617">
+      </div>
+    </div>
     <div class="footer-content">
-      <div class="f1">
-        <h3 style="font-size: 18px; margin: 0">ACM - NIT,  SURAT</h3>
-        <br>
-        <hr class="hr">
-        <p id="f1-data">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-        <h4>Get Social</h4>
-        <a class="social" href=#>  <i style="color : #3B5998; font-size: 25px;margin-top: 20px" class="fa fa-facebook-square"></i></a>
+  	  <div class="f1">
+  	    <h3 style="font-size: 1.15em; margin: 0">ACM - NIT,  SURAT</h3>
+  	    <br>
+  	  <hr class="hr">
+  	  <p id="f1-data">ACM NIT-Surat is a student chapter highly focused on planning and organising events for coding, development, design, etc.</p>
+  	  <h4>Get Social</h4>
+  	    <a class="social" href="https://www.facebook.com/acmnitsurat">  <i style="color : #3B5998; font-size: 1.5em;margin-top: 20px" class="fa fa-facebook-square"></i></a>
 
-         <a class="social" href=#><i style="color: #d34836; font-size: 25px;margin-top: 20px" class="fa fa-google"></i></a>
+     <a class="social" href="mailto:acmnitsurat@gmail.com"><i style="color: #d34836; font-size: 1.5em;margin-top: 20px" class="fa fa-google"></i></a>
 
-        <a class="social" href=#><i style="color: #4099ff; font-size: 25px;margin-top: 20px" class="fa fa-twitter"></i></a>
-        </div>
-      <div class="f2">
-        <h3 style="font-size: 18px; margin: 0">QUICK LINKS</h3>
-        <br>
-        <hr class="hr">
-        <ul id="tags">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+    <a class="social" href="https://twitter.com/acmnitsurat"><i style="color: #4099ff; font-size: 1.5em;margin-top: 20px" class="fa fa-twitter"></i></a>
+  	    </div>
+  	  <div class="f2">
+  	    <h3 style="font-size: 1.15em; margin: 0">QUICK LINKS</h3>
+  	    <br>
+  	    <hr class="hr">
+  	    <ul id="tags">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./team.php">Team</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
-      </div>
-      <div class="f3">
-        <h3 style="font-size: 18px; margin: 0">CONTACT</h3>
-        <br>
-        <hr class="hr">
-        <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
-        <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
-        <i class='fa fa-envelope' style="color: #cbd1db"></i>
-        <p>abc@xyz.com</p><br>
-        <i class='fa fa-mobile' style="color: #cbd1db"></i>
-        <p>SVNIT, Ichchhanth, Surat - 395 007</p>
+  	  </div>
+  	  <div class="f3">
+  	    <h3 style="font-size: 1.15em; margin: 0">CONTACT</h3>
+  	    <br>
+  	    <hr class="hr">
+  	    <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
+  	    <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
+  	    <i class='fa fa-envelope' style="color: #cbd1db"></i>
+  	    <p>acmnitsurat@gmail.com</p><br>
+  	    <i class='fa fa-mobile' style="color: #cbd1db"></i>
+  	    <p>SVNIT, Ichchhanth, Surat - 395 007</p>
 
-      </div>
-    </div>
-    <div class="copyleft"><i class="fa fa-copyright fa-flip-horizontal"></i>
-      Copyleft ACM NIT SURAT
-    </div>
-      <script src="js/data.js"></script>
+  	  </div>
+  	</div>
+
+      <!-- <script src="js/data.js"></script> -->
       <script src="js/main.js"></script>
-      <script src="js/memberData.js"></script>
+      <!-- <script src="js/memberData.js"></script> -->
+      <script type="text/javascript" src="js/events.js"></script>
+      <script type="text/javascript" src="js/eventCreater.js"></script>
   </body>
 </html>
