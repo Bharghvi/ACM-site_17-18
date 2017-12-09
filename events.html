@@ -9,14 +9,34 @@
 		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
         <link rel="stylesheet" href="css/eventProject.css">
 		<!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+      <meta name="viewport" content="width=device-width">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
-    
+<style media="screen">
+
+@media only screen and (max-width: 500px) {
+
+  .body {
+    width: auto !important;
+  }
+
+  #about{
+    padding: 0px;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+  }
+
+  #svnitlogo , #acmlogo{
+    height: 60px;
+    width: 60px;
+    float: left;
+  }
+}
+</style>
     <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -55,8 +75,8 @@ function topFunction() {
 			<div id="headerblock" class="middle">
 				<ul id="navigationpanel">
 					<li id="0" class="navitems"><a href="./index.html">Home</a></li>
-					<li id="1" class="navitems"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
-					<li id="2" class="navitems"><a href="./team.html">Team</a></li>
+					<li id="ac" class="navitems"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
+					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
 					<li id="4" class="navitems"><a href="./projects.html">Projects</a></li>
 					<li id="5" class="navitems"><a href="./contact.html">Contact</a></li>
 				</ul>
@@ -72,7 +92,7 @@ function topFunction() {
     <div class="hoverMain holder">
       <div class="hrow hoverRow">
         <div class="vcol-6 vcol-md-12 vcol-sl-12">
-          <img src="" class="hoverImg">
+          <img src="img/events/inception.jpg" class="hoverImg">
         </div>
         <div class="vcol-6 vcol-md-12 vcol-sl-12 eventInfo">
           <h2 class="hoverTitle"></h2><hr>
@@ -89,61 +109,59 @@ function topFunction() {
     <div class="holder">
       <div class="hrow" id="recentEvents"></div>
     </div>
-    
+
     <div id="past1Menu" class="pastEventMenus">
       <div>
         Events of 2016-2017 Year
       </div>
     </div>
     <div id="past1" class="holder">
-      <div class="hrow" id="pastEvents1617"></div>
+      <div class="hrow" id="pastEvents1617">
+      </div>
     </div>
-
     <div class="footer-content">
-      <div class="f1">
-        <h3 style="font-size: 18px; margin: 0">ACM - NIT,  SURAT</h3>
-        <br>
-        <hr class="hr">
-        <p id="f1-data">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-        <h4>Get Social</h4>
-        <a class="social" href=#>  <i style="color : #3B5998; font-size: 25px;margin-top: 20px" class="fa fa-facebook-square"></i></a>
+  	  <div class="f1">
+  	    <h3 style="font-size: 1.15em; margin: 0">ACM - NIT,  SURAT</h3>
+  	    <br>
+  	  <hr class="hr">
+  	  <p id="f1-data">ACM NIT-Surat is a student chapter highly focused on planning and organising events for coding, development, design, etc.</p>
+  	  <h4>Get Social</h4>
+  	    <a class="social" href="https://www.facebook.com/acmnitsurat">  <i style="color : #3B5998; font-size: 1.5em;margin-top: 20px" class="fa fa-facebook-square"></i></a>
 
-         <a class="social" href=#><i style="color: #d34836; font-size: 25px;margin-top: 20px" class="fa fa-google"></i></a>
+     <a class="social" href="mailto:acmnitsurat@gmail.com"><i style="color: #d34836; font-size: 1.5em;margin-top: 20px" class="fa fa-google"></i></a>
 
-        <a class="social" href=#><i style="color: #4099ff; font-size: 25px;margin-top: 20px" class="fa fa-twitter"></i></a>
-        </div>
-      <div class="f2">
-        <h3 style="font-size: 18px; margin: 0">QUICK LINKS</h3>
-        <br>
-        <hr class="hr">
-        <ul id="tags">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+    <a class="social" href="https://twitter.com/acmnitsurat"><i style="color: #4099ff; font-size: 1.5em;margin-top: 20px" class="fa fa-twitter"></i></a>
+  	    </div>
+  	  <div class="f2">
+  	    <h3 style="font-size: 1.15em; margin: 0">QUICK LINKS</h3>
+  	    <br>
+  	    <hr class="hr">
+  	    <ul id="tags">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./team.php">Team</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
-      </div>
-      <div class="f3">
-        <h3 style="font-size: 18px; margin: 0">CONTACT</h3>
-        <br>
-        <hr class="hr">
-        <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
-        <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
-        <i class='fa fa-envelope' style="color: #cbd1db"></i>
-        <p>abc@xyz.com</p><br>
-        <i class='fa fa-mobile' style="color: #cbd1db"></i>
-        <p>SVNIT, Ichchhanth, Surat - 395 007</p>
+  	  </div>
+  	  <div class="f3">
+  	    <h3 style="font-size: 1.15em; margin: 0">CONTACT</h3>
+  	    <br>
+  	    <hr class="hr">
+  	    <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
+  	    <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
+  	    <i class='fa fa-envelope' style="color: #cbd1db"></i>
+  	    <p>acmnitsurat@gmail.com</p><br>
+  	    <i class='fa fa-mobile' style="color: #cbd1db"></i>
+  	    <p>SVNIT, Ichchhanth, Surat - 395 007</p>
 
-      </div>
-    </div>
-    <div class="copyleft"><i class="fa fa-copyright fa-flip-horizontal"></i>
-      Copyleft ACM NIT SURAT
-    </div>
+  	  </div>
+  	</div>
+
       <!-- <script src="js/data.js"></script> -->
       <script src="js/main.js"></script>
       <!-- <script src="js/memberData.js"></script> -->
-      <script type="text/javascript" src="js/eventCreater.js"></script>
       <script type="text/javascript" src="js/events.js"></script>
+      <script type="text/javascript" src="js/eventCreater.js"></script>
   </body>
 </html>

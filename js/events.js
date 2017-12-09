@@ -35,6 +35,16 @@ $("#past2Menu").click(function(){
 	}
 });
 
+var url=window.location.href;
+url=url.split('?');
+if(url.length>1)
+{
+    var eventNumber=url[1].split('=');
+    eventNumber=parseInt(eventNumber[1]);
+    if(eventNumber<recentEventConfig.length)
+        showDetailEvent(eventNumber);
+}
+
 });
 
 function showDetailEvent(eventNumber)
@@ -42,9 +52,9 @@ function showDetailEvent(eventNumber)
 	$(".hoverBack").fadeIn(800);
 	$(".hoverMain").fadeIn(800);
 	$(".hoverClose").fadeIn(800);
-	var source=document.getElementsByClassName('eventsPoster')[eventNumber].getElementsByTagName('img')[0].getAttribute('src');
+	var source=recentEventConfig[eventNumber]["imgSrc"];
 	$(".hoverImg").attr('src',source);
-	var title=document.getElementsByClassName('eventsPoster')[eventNumber].getElementsByTagName('h4')[0].innerHTML;
+	var title=recentEventConfig[eventNumber]["eventTitle"];
 	$(".hoverTitle").html(title);
 	$('html, body').css({ 'overflow': 'hidden'});
 
