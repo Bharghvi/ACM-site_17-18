@@ -1,0 +1,63 @@
+@media screen and (max-width: 550px){
+  nav ul{
+    max-height: 0px;
+  }
+
+  .show{
+    max-height: 20em;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 0px;
+    border-bottom: 2px solid #d5dce4;
+  }
+  
+  nav ul li : firstchild{
+    border-top: 2px solid #d5dce4;
+  }
+
+  nav ul li: lastchild{
+    border-bottom: none;
+  }
+
+  .menu-icon{
+      display: block;
+      box-sizing: border-box;
+  }
+}
+
+
+@media screen and (max-width: 470px) {
+    .body {
+      width: auto !important;
+    }
+    #svnitlogo , #acmlogo{
+      height: 60px;
+      width: 60px;
+      float: left;
+    }
+    #about{
+      padding: 0px;
+      display: block;
+    }
+    .half{
+        width: 100%;
+        margin-right: 0%;
+        margin-top: 8%;
+    }
+
+
+}
+
+@media screen and (min-width: 471px) {
+  .js-reveal {
+    opacity: 1;
+    transition: opacity .7s ease-in, margin-top .7s ease-out;
+  }
+
+  .js-reveal--hidden {
+    opacity: 0;
+    margin-top: 3em;
+  }
+}

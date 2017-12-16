@@ -53,26 +53,52 @@ body{
 	padding: 0px 10px;
 	line-height: 100px;
 	float: left;
+  font-weight: bold;
 }
 
 #headerblock{
 	width: 800px;
 }
 
-#navigationpanel
+
+#headerblock{
+	width: 800px;
+}
+
+.menu-icon{
+  margin: auto;
+  line-height: 0px;
+  background: white;
+	text-align: right;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	cursor: pointer;
+  height: auto;
+	color: black ;
+	display: none;
+	text-align: right;
+}
+
+nav ul
 {
 	list-style-type: none;
-  display: flex;
   justify-content: center;
+  overflow: hidden;
   margin-bottom: 0px !important;
+  -webkit-transition: max-height 0.7s;
+  -ms-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
+  -o-transition: max-height 0.7s;
+  transition: max-height 0.7s;
 }
-#navigationpanel li{
-
+nav ul li{
+  display: inline-block;
 	text-align: center;
-	display: inline-block;
 }
 
-#navigationpanel li a{
+nav ul li a{
 	display: inline-block;
   width: 130px;
   padding-top: 15px;
@@ -83,7 +109,7 @@ body{
 	text-decoration: none;
 }
 
-#navigationpanel li:hover{
+nav ul li:hover{
   color: var(--color-blue);
 	background: var(--color-light-grey);
   margin-left: -3px;
@@ -130,14 +156,20 @@ body{
 
 }
 
+#heading h3{
+  text-align: center;
+}
+
 #heading{
-	font-size: 1.5em;
 	color: var(--color-blue);
 	padding: 5px 0;
 }
 
+
 #content{
-	color: #777;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 1.35em;
 }
 
 .member{
@@ -441,19 +473,31 @@ text-justify: inter-word;
 }
 
 #about{
-    padding: 0 200px;
-    margin: 20px;
+    padding: 20px;
+    font-size: 1.35em;
+    margin: 2%;
     display: flex;
     justify-content: center;
 }
 
-.what, .why {
+.half{
+    width: 43%;
+    margin-right: 7%;
+    padding: 0 10px;
+}
+
+.halflast{
+  margin-right: 0%;
+}
+
+
+/*.what, .why {
     width: 50%;
     padding: 0 10px;
 }
 .why {
     margin-top: 13px;
-}
+}*/
 
 .hr {
   margin: 0;
