@@ -5,7 +5,8 @@
     <title>NIT Surat ACM</title><meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="css/style.css" rel="stylesheet" />
+		<link href="./css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/responsive.css">
 		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
         <link rel="stylesheet" href="css/eventProject.css">
 		<!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
@@ -17,24 +18,15 @@
 <meta name="HandheldFriendly" content="true">
 <style media="screen">
 
-@media only screen and (max-width: 500px) {
+<style media="screen">
+.js-reveal {
+  opacity: 1;
+  transition: opacity .7s ease-in, margin-top .7s ease-out;
+}
 
-  .body {
-    width: auto !important;
-  }
-
-  #about{
-    padding: 0px;
-      margin: 20px;
-      display: flex;
-      justify-content: center;
-  }
-
-  #svnitlogo , #acmlogo{
-    height: 60px;
-    width: 60px;
-    float: left;
-  }
+.js-reveal--hidden {
+  opacity: 0;
+  margin-top: 3em;
 }
 </style>
     <script>
@@ -54,7 +46,14 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+$(document).ready(function(){
+  $('.menubar').on('click', function () {
+    $('ul').toggleClass('showing');
+  });
+});
+
 </script>
+<script type="text/javascript" src="js/responsive.js"></script>
   </head>
   <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" style="color: white; font-size: 25px"></i></button>
@@ -72,15 +71,21 @@ function topFunction() {
 				<div class="clear"></div>
 			</div>
 			<div class="fullhr"></div>
-			<div id="headerblock" class="middle">
-				<ul id="navigationpanel">
-					<li id="0" class="navitems"><a href="./index.html">Home</a></li>
-					<li id="ac" class="navitems"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
-					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
-					<li id="4" class="navitems"><a href="./projects.html">Projects</a></li>
-					<li id="5" class="navitems"><a href="./contact.html">Contact</a></li>
-				</ul>
-			</div>
+      <div id="headerblock" class="middle">
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+          <!-- <span class="menubar" style="text-align:center">MENU</span> -->
+        </div>
+        <nav>
+            <ul id="navigationpanel">
+              <li id="0" class="navitems"><a href="./index.html" style="text-decoration: none;">Home</a></li>
+              <li id="ac" class="navitems"><a href="./events.html" style="text-decoration: none;">Events</a></li><!-- place event archives here as well -->
+              <li id="2" class="navitems"><a href="./team.php" style="text-decoration: none;">Team</a></li>
+              <li id="4" class="navitems"><a href="./projects.html" style="text-decoration: none;">Projects</a></li>
+              <li id="5" class="navitems"><a href="./contact.html" style="text-decoration: none;">Contact</a></li>
+           </ul>
+        </nav>
+      </div>
 		</div>
     <div id="titlebar">
       <div id="titlebartext">
@@ -91,10 +96,10 @@ function topFunction() {
     <div class="hoverBack"></div>
     <div class="hoverMain holder">
       <div class="hrow hoverRow">
-        <div class="vcol-6 vcol-md-12 vcol-sl-12">
+        <div class="vcol-6">
           <img src="img/events/inception.jpg" class="hoverImg">
         </div>
-        <div class="vcol-6 vcol-md-12 vcol-sl-12 eventInfo">
+        <div class="vcol-6 eventInfo">
           <h2 class="hoverTitle"></h2><hr>
           <h5 class="date"></h5>
           <h5 class="timings"></h5>

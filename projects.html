@@ -5,9 +5,10 @@
     <title>NIT Surat ACM</title><meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="css/style.css" rel="stylesheet" />
+		<link href="./css/style.css" rel="stylesheet" />
 		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
-        <link rel="stylesheet" href="css/eventProject.css">
+    <link rel="stylesheet" href="css/eventProject.css">
+    <link rel="stylesheet" href="./css/responsive.css">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -57,7 +58,16 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+$(document).ready(function(){
+  $('.menubar').on('click', function () {
+    $('ul').toggleClass('showing')
+  });
+});
+
 </script>
+<script type="text/javascript" src="js/responsive.js"></script>
   </head>
   <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" style="color: white; font-size: 25px"></i></button>
@@ -76,13 +86,19 @@ function topFunction() {
     </div>
     <div class="fullhr"></div>
     <div id="headerblock" class="middle">
-      <ul id="navigationpanel">
-        <li id="0" class = "ac"><a href="index.html">Home</a></li>
-        <li id="1" ><a href="events.html">Events</a></li><!-- place event archives here as well -->
-        <li id="2"><a href="team.php">Team</a></li>
-        <li id="ac"><a href="projects.html">Projects</a></li>
-        <li id="5"><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="menu-icon">
+      <i class="fa fa-bars fa-2x"></i>
+      <!-- <span class="menubar" style="text-align:center">MENU</span> -->
+    </div>
+      <nav>
+          <ul id="navigationpanel">
+            <li id="0" class="navitems"><a href="./index.html" style="text-decoration: none;">Home</a></li>
+            <li id="1" class="navitems"><a href="./events.html" style="text-decoration: none;">Events</a></li><!-- place event archives here as well -->
+            <li id="2" class="navitems"><a href="./team.php" style="text-decoration: none;">Team</a></li>
+            <li id="ac" class="navitems"><a href="./projects.html" style="text-decoration: none;">Projects</a></li>
+            <li id="5" class="navitems"><a href="./contact.html" style="text-decoration: none;">Contact</a></li>
+         </ul>
+      </nav>
     </div>
   </div>
     <div id="titlebar">
@@ -108,7 +124,7 @@ function topFunction() {
 
             <div class="projectDiv">
               <h3>Improve this Web Site *</h3>
-              <p><span class="projectTitles">Details : </span>This project aims at improving the web site for the chapter, including but not limited to redesign, feature addition as implementation of client-based notification of upcoming events, improving page load speeds, a better and fool proof "Contact Form" and similar features. 
+              <p><span class="projectTitles">Details : </span>This project aims at improving the web site for the chapter, including but not limited to redesign, feature addition as implementation of client-based notification of upcoming events, improving page load speeds, a better and fool proof "Contact Form" and similar features.
               Feel free to suggest something that you may like to have changed.<br><strong>We would like to shift to python structure, get your ideas/suggestions heard</strong> </p>
               <p><span class="projectTitles">Pre - Requisites : </span>Basic knowledge of HTML, CSS and JavaScript.</p>
               <p><span class="projectTitles">Bonous Points : </span>Have programmed earlier on the beckend, knowledge of system admin panel, like cPanel or similar</p>

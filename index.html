@@ -5,7 +5,8 @@
     <title>NIT Surat ACM</title><meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="css/style.css" rel="stylesheet" />
+		<link href="./css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/responsive.css">
 		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
 		<!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
     <script src="http://malsup.github.io/jquery.cycle.all.js"></script>
@@ -16,37 +17,6 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
-<style media="screen">
-
-@media only screen and (max-width: 500px) {
-
-  .body {
-    width: auto !important;
-  }
-
-  #about{
-    padding: 0px;
-      margin: 20px;
-      display: flex;
-      justify-content: center;
-  }
-
-  #svnitlogo , #acmlogo{
-    height: 60px;
-    width: 60px;
-    float: left;
-  }
-}
-.js-reveal {
-  opacity: 1;
-  transition: opacity .7s ease-in, margin-top .7s ease-out;
-}
-
-.js-reveal--hidden {
-  opacity: 0;
-  margin-top: 3em;
-}
-</style>
     <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -64,7 +34,15 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+// $(document).ready(function(){
+//   $('.menubar').on('click', function () {
+//     $('ul').toggleClass('showing');
+//   });
+// });
+
 </script>
+<script type="text/javascript" src="js/responsive.js"></script>
   </head>
   <body>
     <div class="body">
@@ -83,14 +61,20 @@ function topFunction() {
 				<div class="clear"></div>
 			</div>
 			<div class="fullhr"></div>
-			<div id="headerblock" class="middle">
+      <div id="headerblock" class="middle">
+      <nav>
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+          <!-- <span class="menubar" style="text-align:center">MENU</span> -->
+        </div>
 				<ul id="navigationpanel">
-					<li id="ac" class="navitems"><a href="./index.html">Home</a></li>
-					<li id="1" class="navitems"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
-					<li id="2" class="navitems"><a href="./team.php">Team</a></li>
-					<li id="4" class="navitems"><a href="./projects.html">Projects</a></li>
-					<li id="5" class="navitems"><a href="./contact.html">Contact</a></li>
+					<li id="ac" class="navitems"><a href="./index.html" style="text-decoration:none">Home</a></li>
+					<li id="1" class="navitems"><a href="./events.html" style="text-decoration:none">Events</a></li><!-- place event archives here as well -->
+					<li id="2" class="navitems"><a href="./team.php" style="text-decoration:none">Team</a></li>
+					<li id="4" class="navitems"><a href="./projects.html" style="text-decoration:none">Projects</a></li>
+					<li id="5" class="navitems"><a href="./contact.html" style="text-decoration:none">Contact</a></li>
 				</ul>
+      </nav>
 			</div>
 		</div>
     <div id="titlebar">
@@ -108,7 +92,7 @@ function topFunction() {
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" style={ width: 100%}>
+    <div class="carousel-inner" style={ width: 100;}>
       <div class="item active">
         <img src="img/1n.jpg" alt="Los Angeles" style="width:100%; height: 550px">
       </div>
@@ -135,7 +119,7 @@ function topFunction() {
     </div>
     <div class="datablock middle">
     <div class="js-reveal" id="heading">
-        About Us
+        <h3>About Us</h3>
     </div>
     <div class="js-reveal" id="content">
         Founded in 2005, the chapter has been a centre for various learning, fun, and productive activities. Be it coding challenges, hackathons, quizzes, or application development, the chapter has done its best.
@@ -144,24 +128,26 @@ function topFunction() {
         The bar is being raised year after year. With announcement of Epiphany, CTF! in Quest, and other challenges as open-for-all contests, the chapter is aiming nationwide recognition.
     </div>
     <div id="about" class="js-reveal">
-        <div class="what">
+        <div class="half">
             <div align="center"><i class="fa fa-question-circle" style="font-size: 8.75em; color: var(--color-blue)"></i>
-            <h4 class="js-reveal">What is ACM?</h4></div>
+            <h3 class="js-reveal">What is ACM ?</h3></div>
             <p class="js-reveal">It is an International Learned Society for Computing. It has its chapters in various institutes.
     NIT Surat ACM student chapter is one of them.
     ACM brings together computing educators, researchers, and professionals to inspire dialogue, share resources, and address the field's challenges.</p>
         </div>
-        <div class="why">
-            <div align='center'><i class='fa fa-users' style="font-size: 7.188em; color: var(--color-blue)"></i>
-            <h4 class="js-reveal" style="margin-top: 22px">Why join ACM?</h4></div>
-            <p class="js-reveal">1. Access to leading edge Publications <br>
-    2. Professtional Networking Experience <br>
-    3. Discounts And Special Offers on books<br>
-    4. Access to ACM Digital Library - a huge collection <br>
-    5. Focus on Job Target Career and Chance to organize and volunteer large scale events</p>
+        <div class="half halflast">
+            <div align='center'><i class='fa fa-users' style="font-size: 8.75em; color: var(--color-blue)"></i>
+            <h3 class="js-reveal">Why join ACM ?</h3></div>
+              <ol>
+                <li>Access to leading edge Publications </li>
+                <li>Professtional Networking Experience</li>
+                <li>Discounts And Special Offers on books</li>
+                <li>Access to ACM Digital Library - a huge collection</li>
+                <li>Focus on Job Target Career and Chance to organize and volunteer large scale events</li>
+              </ol>
         </div>
     </div>
-    </div>
+  </div>
 
 <div class="footer-content">
   <div class="f1">

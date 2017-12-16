@@ -6,7 +6,8 @@
         <meta charset="utf-8" />
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="css/style.css" rel="stylesheet" />
+        <link href="./css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/responsive.css">
         <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
         <!-- <link rel="stylesheet" href="css/event.css"> -->
         <!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
@@ -35,6 +36,12 @@
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
+            $(document).ready(function(){
+              $('.menubar').on('click', function () {
+                $('ul').toggleClass('showing');
+              });
+            });
+
         </script>
         <style type="text/css">
           body{
@@ -62,6 +69,7 @@
             padding: 5px 20px;
             }
         </style>
+        <script type="text/javascript" src="js/responsive.js"></script>
     </head>
     <body>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" style="color: white; font-size: 25px"></i></button>
@@ -80,14 +88,19 @@
             </div>
             <div class="fullhr"></div>
             <div id="headerblock" class="middle">
-                <ul id="navigationpanel">
-                    <li id="0" class="navitems"><a href="./index.html">Home</a></li>
-                    <li id="1" class="navitems"><a href="./events.html">Events</a></li>
-                    <!-- place event archives here as well -->
-                    <li id="2" class="navitems"><a href="./team.php">Team</a></li>
-                    <li id="4" class="navitems"><a href="./projects.html">Projects</a></li>
-                    <li id="ac" class="navitems"><a href="./contact.html">Contact</a></li>
-                </ul>
+              <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+                <!-- <span class="menubar" style="text-align:center">MENU</span> -->
+              </div>
+              <nav>
+                  <ul id="navigationpanel">
+                    <li id="0" class="navitems"><a href="./index.html" style="text-decoration: none;">Home</a></li>
+                    <li id="1" class="navitems"><a href="./events.html" style="text-decoration: none;">Events</a></li><!-- place event archives here as well -->
+                    <li id="2" class="navitems"><a href="./team.php" style="text-decoration: none;">Team</a></li>
+                    <li id="4" class="navitems"><a href="./projects.html" style="text-decoration: none;">Projects</a></li>
+                    <li id="ac" class="navitems"><a href="./contact.html" style="text-decoration: none;">Contact</a></li>
+                 </ul>
+              </nav>
             </div>
         </div>
         <div id="titlebar">
@@ -172,7 +185,7 @@
                 <h3 style="font-size: 18px; margin: 0">ACM - NIT,  SURAT</h3>
                 <br>
                 <hr class="hr">
-                <p id="f1-data">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p id="f1-data">ACM NIT SURAT</p>
                 <h4>Get Social</h4>
                 <a class="social" href="https://www.facebook.com/acmnitsurat">  <i style="color : #3B5998; font-size: 1.5em;margin-top: 20px" class="fa fa-facebook-square"></i></a>
 

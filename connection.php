@@ -1,7 +1,7 @@
 <?php
 
 
-$db_name="nitsurat_team_details";
+$db_name="acm_team_details";
 $mysql_username="nitsurat_admin";
 $mysql_password="shitHAPPENS!!";
 $server_name="localhost";

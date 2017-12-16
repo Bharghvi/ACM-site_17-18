@@ -5,7 +5,8 @@
     <title>NIT Surat ACM</title><meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css">
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
     <!-- <script src="//use.edgefonts.net/ubuntu:n3,i3,n4,i4,n5,i5,n7,i7:all.js"></script> -->
     <!-- <script src="http://malsup.github.io/jquery.cycle.all.js"></script> -->
@@ -14,8 +15,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="HandheldFriendly" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
 
 <style type="text/css">
     .block {
@@ -67,31 +68,35 @@
     .social {
       text-decoration: none;
       padding: 10px;
+  	}
+
   </style>
 
-    <script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+ <script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
+	function scrollFunction() {
+	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	        document.getElementById("myBtn").style.display = "block";
+	    } else {
+	        document.getElementById("myBtn").style.display = "none";
+	    }
+	}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	    document.body.scrollTop = 0;
+	    document.documentElement.scrollTop = 0;
+	}
+
 </script>
+<script type="text/javascript" src="js/responsive.js"></script>
   </head>
   <body>
     <div class="body">
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" style="color: white; font-size: 1.5em"></i></button>
-    <div id="thecontainer">
+   <div id="thecontainer">
     <div id="logohead" class="middle">
       <div >
         <img id="acmlogo" src="img/resized_logo.png" alt="">
@@ -105,20 +110,26 @@ function topFunction() {
       <div class="clear"></div>
     </div>
     <div class="fullhr"></div>
-    <div id="headerblock" class="middle">
-      <ul id="navigationpanel">
-        <li id="0"><a href="./index.html">Home</a></li>
-        <li id="1"><a href="./events.html">Events</a></li><!-- place event archives here as well -->
-        <li id="ac"><a href="./team.php">Team</a></li>
-        <li id="4"><a href="./projects.html">Projects</a></li>
-        <li id="5"><a href="./contact.html">Contact</a></li>
-      </ul>
+	<div id="headerblock" class="middle">
+    <div class="menu-icon">
+      <i class="fa fa-bars fa-2x"></i>
+      <!-- <span class="menubar" style="text-align:center">MENU</span> -->
     </div>
+        <nav>
+		    <ul id="navigationpanel">
+    			<li id="0" class="navitems"><a href="./index.html" style="text-decoration: none;">Home</a></li>
+    			<li id="1" class="navitems"><a href="./events.html" style="text-decoration: none;">Events</a></li><!-- place event archives here as well -->
+    			<li id="ac" class="navitems"><a href="./team.php" style="text-decoration: none;">Team</a></li>
+    			<li id="4" class="navitems"><a href="./projects.html" style="text-decoration: none;">Projects</a></li>
+    			<li id="5" class="navitems"><a href="./contact.html" style="text-decoration: none;">Contact</a></li>
+	        </ul>
+        </nav>
+	</div>
   </div>
-    
+
     <div id="titlebar">
       <div id="titlebartext">
-        Who we are
+        WHO WE ARE
       </div>
     </div>
 
@@ -129,7 +140,7 @@ function topFunction() {
             include("connection.php");
             $year = 2017;
             $sql= "select * from team_details where year='$year'";
-            
+
             $result=mysqli_query($conn, $sql);
               while($row=mysqli_fetch_array($result))
               {
@@ -137,7 +148,7 @@ function topFunction() {
                 $isphotoavailable = $row['imgavail'];
                 //$photourl = "//nitsurat.acm.org/committee/" . $id.".jpg" ;
                 //$photourl = $isphotoavailable ? "//nitsurat.acm.org/committee/" . $id . ".jpg" : "//nitsurat.acm.org/committee/unknown.jpg";
-                $photourl = $isphotoavailable ? "/committee/" . $id . ".jpg" : "//nitsurat.acm.org/committee/unknown.jpg";
+                $photourl = $isphotoavailable ? "/acm/committee/" . $id . ".jpg" : "//nitsurat.acm.org/committee/unknown.jpg";
                 ?>
           <div class="col-md-2 col-sm-3 col-xs-4 block">
               <div class="circle" style="background:url(<?php echo $photourl?>) no-repeat center; background-size: contain; background-color: #ddd;">
@@ -171,7 +182,7 @@ function topFunction() {
                 <div><?php echo $row['designation']?></div>
               </p>
           </div>
-          <?php  
+          <?php
         }
         ?>
       </div>
@@ -186,7 +197,7 @@ function topFunction() {
   <div class="container">
     <?php
     $sql_year_query= "select distinct(year) from team_details where year != '$year' ORDER BY year DESC";
-            
+
     $list_of_year = mysqli_query($conn, $sql_year_query);
       while($outer_row=mysqli_fetch_array($list_of_year))
       {
@@ -194,17 +205,17 @@ function topFunction() {
         ?>
     <h3><?php echo "Team of ".$year." - ".($year+1); ?></h3>
     <div class="row">
-      
+
       <?php
             $sql= "select * from team_details where year='$year'";
-            
+
             $result=mysqli_query($conn, $sql);
               while($row=mysqli_fetch_array($result))
               {
                 $id = $row['id'];
                 $isphotoavailable = $row['imgavail'];
                 //$photourl = "//nitsurat.acm.org/committee/" . $id.".jpg" ;
-                $photourl = $isphotoavailable ? "/committee/" . $id . ".jpg" : "//nitsurat.acm.org/committee/unknown.jpg";
+                $photourl = $isphotoavailable ? "/acm/committee/" . $id . ".jpg" : "//nitsurat.acm.org/committee/unknown.jpg";
                 ?>
           <div class="col-md-2 col-sm-3 col-xs-4 block">
               <div class="circle" style="background:url(<?php echo $photourl ?>) no-repeat center; background-size: contain; background-color: #ddd;">
@@ -238,11 +249,11 @@ function topFunction() {
                 <div><?php echo $row['designation']?></div>
               </p>
           </div>
-          <?php  
+          <?php
         }
         ?>
     </div>
-    <?php  
+    <?php
         }
         ?>
   </div>
