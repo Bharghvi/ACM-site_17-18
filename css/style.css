@@ -5,7 +5,7 @@
     --color-medium-grey: #c0c0c0;
     --color-grey: #4f6482;
 		--color-blue:#0c264f;
-    font-family: 'Roboto', sans-serif;
+		font-family: 'Roboto', sans-serif;
 }
 
 .mob_footer{
@@ -26,8 +26,12 @@ body{
   background-color: #eaedf2;
 	padding: 10px 0;
 	height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #svnitlogo , #acmlogo{
@@ -71,7 +75,6 @@ body{
   background: white;
 	text-align: right;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 15px 10px;
 	cursor: pointer;
@@ -84,12 +87,12 @@ body{
 nav ul
 {
 	list-style-type: none;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
   margin-bottom: 0px !important;
   -webkit-transition: max-height 0.7s;
-  -ms-transition: max-height 0.7s;
-  -moz-transition: max-height 0.7s;
   -o-transition: max-height 0.7s;
   transition: max-height 0.7s;
 }
@@ -148,6 +151,8 @@ nav ul li:hover{
 	width: inherit;
 	height: 564px;
 	padding: 0;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 }
 
@@ -194,7 +199,8 @@ nav ul li:hover{
 
 .memberImage {
 	border-radius: 75px;
-	box-shadow: 0 0 2px #000;
+	-webkit-box-shadow: 0 0 2px #000;
+	        box-shadow: 0 0 2px #000;
 }
 
 .name {
@@ -238,7 +244,8 @@ nav ul li:hover{
 	min-width: 250px;
 	background: #fff;
 	border-radius: 5px;
-	box-shadow: 0 0 2px #000;
+	-webkit-box-shadow: 0 0 2px #000;
+	        box-shadow: 0 0 2px #000;
 	display: none;
 	z-index: 10;
 }
@@ -400,9 +407,12 @@ nav ul li:hover{
 }
 
 .footer-content {
-  background-color: black;
+  background-color:rgba(12, 12, 12);
   color: #cbd1db;
-  display: flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 100rem;
 }
 
 .f1, .f2, .f3 {
@@ -412,20 +422,22 @@ nav ul li:hover{
 
 #f1-data {
   padding: 20px 0px;
-  font-size: 0.9em;
+  font-size: .9em;
   line-height: 25px;
 }
 #tags {
   list-style: none;
   padding: 20px 0px;
   font-size: 0.9em;
-  line-height: 30px;
+	line-height: 30px;
+	text-align: center;
 }
 
 #tags li a {
   text-decoration: none;
-  color: #cbd1db;
-  font-size: 0.9em;
+  color:whitesmoke;
+	font-size: 1.2em;
+	text-shadow:  0 0 5px #7ffd2b;
 }
 
 #fb, #google {
@@ -440,7 +452,11 @@ height: 30px
 }
 
 hr{
-  border-style: groove;
+	border-style: groove;
+	margin-left: auto;
+	margin-right: auto;
+	height: 5px;
+
 }
 
 .h3{
@@ -476,8 +492,12 @@ text-justify: inter-word;
     padding: 20px;
     font-size: 1.35em;
     margin: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .half{
@@ -505,11 +525,7 @@ text-justify: inter-word;
   border: 2px groove  #cbd1db;
 }
 
-.social {
-  text-decoration: none;
-  padding-right: 20px;
-  margin-top: 40px
-}
+
 
 
 .pics {
@@ -530,4 +546,62 @@ text-justify: inter-word;
     height: 200px;
     top:  0;
     left: 0
+}
+
+.copy{
+	font-size: 6rem;
+	text-align: center;
+
+
+}
+
+.cop-contain{
+	text-align: center;
+	top: 100px;
+}
+
+.cent{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+footer{
+	background-color:  rgba(17, 17, 17, 0.63);
+	padding: 10px;
+	margin: 10px;
+	color: rgb(255, 255, 255);
+	text-shadow:0 0 4px tan;
+}
+label{
+	margin: 5px;
+}
+
+.social-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	text-align: center;
+	
+	
+}
+.social {
+  text-decoration: none;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+.social{
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	border: 10px goldenrod;
+
+}
+.social:hover
+{
+	background-color:rgba(240, 240, 247, 0.164)
 }

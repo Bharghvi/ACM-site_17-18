@@ -170,47 +170,106 @@ $(document).ready(function(){
       </div>
     </div>
 
-    <div class="footer-content">
-  	  <div class="f1">
-  	    <h3 style="font-size: 1.15em; margin: 0">ACM - NIT,  SURAT</h3>
-  	    <br>
-  	  <hr class="hr">
-  	  <p id="f1-data">ACM NIT-Surat is a student chapter highly focused on planning and organising events for coding, development, design, etc.</p>
-  	  <h4>Get Social</h4>
-  	    <a class="social" href="https://www.facebook.com/acmnitsurat">  <i style="color : #3B5998; font-size: 1.5em;margin-top: 20px" class="fa fa-facebook-square"></i></a>
-
-     <a class="social" href="mailto:acmnitsurat@gmail.com"><i style="color: #d34836; font-size: 1.5em;margin-top: 20px" class="fa fa-google"></i></a>
-
-    <a class="social" href="https://twitter.com/acmnitsurat"><i style="color: #4099ff; font-size: 1.5em;margin-top: 20px" class="fa fa-twitter"></i></a>
-  	    </div>
-  	  <div class="f2">
-  	    <h3 style="font-size: 1.15em; margin: 0">QUICK LINKS</h3>
-  	    <br>
-  	    <hr class="hr">
-  	    <ul id="tags">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./events.html">Events</a></li>
-          <li><a href="./team.php">Team</a></li>
-          <li><a href="./projects.html">Projects</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-  	  </div>
-  	  <div class="f3">
-  	    <h3 style="font-size: 1.15em; margin: 0">CONTACT</h3>
-  	    <br>
-  	    <hr class="hr">
-  	    <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
-  	    <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
-  	    <i class='fa fa-envelope' style="color: #cbd1db"></i>
-  	    <p>acmnitsurat@gmail.com</p><br>
-  	    <i class='fa fa-mobile' style="color: #cbd1db"></i>
-  	    <p>SVNIT, Ichchhanth, Surat - 395 007</p>
-
-  	  </div>
-    </div>
-    <div class="copyleft"><i class="fa fa-copyright fa-flip-horizontal"></i>
-      Copyleft ACM NIT SURAT
-    </div>
+    <footer>
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-xs-4 col-xs-offset-1">
+              <h3 style="font-size: 1.15em; margin: 0;">ACM - NIT, SURAT</h3>
+              <br>
+              <hr class="hr">
+              <p id="f1-data" style="text-shadow:0 0 5px #7ffd2b">ACM NIT-Surat is a student chapter highly focused on planning and organising events for coding, development,
+                design, etc.</p>
+              <br>
+              <button type="button" class="btn btn-active btn-lg btn-danger" data-toggle="modal" data-target="#myModal1">
+                <i class='fa fa-map-marker' style="color: #7ffd2b;font-size:30px; "></i>
+                <br>Locate us here</button>
+              <div class="modal fade" id="myModal1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 style="text-shadow:0 0 5px #7ffd2b;color:aqua">National Institute of Technology, Surat</h1>
+                      <button type="button" class="close btn" data-dismiss="modal"></button>
+  
+                    </div>
+                    <div class="modal-body">
+                      <div class="row-fluid">
+                        <iframe width="100%" height="400" frameborder="0" style="border:0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=SVNIT,+Surat,+Gujarat,+India&amp;aq=0&amp;oq=svn&amp;sll=37.0625,-95.677068&amp;sspn=41.903538,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=m&amp;ll=21.165043,72.783673&amp;spn=0.005003,0.008572&amp;z=17&amp;iwloc=lyrftr:m,4772576491330785785,21.164693,72.783233&amp;output=embed"
+                          allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-1 cop-contain">
+              <i class="fa fa-copyright copy"></i>
+            </div>
+            <div class="col-xs-5">
+              <h3 style="font-size: 1.15em; margin: 0">QUICK LINKS</h3>
+              <br>
+              <hr class="hr">
+              <ul id="tags">
+                <li>
+                  <a href="./index.html">Home</a>
+                </li>
+                <li>
+                  <a href="./events.html">Events</a>
+                </li>
+                <li>
+                  <a href="./team.php">Team</a>
+                </li>
+                <li>
+                  <a href="./projects.html">Projects</a>
+                </li>
+                <li>
+                  <a href="./contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row cent">
+            <div class="col-xs-6">
+              <h3 style="font-size: 1.15em; margin: 0">STAY CONNECTED</h3>
+              <form action="#" class="form-group">
+  
+                <input type="email" placeholder="Email Address" name="fmail" class="form-control">
+                <button type="submit" class="btn btn-lg btn-active btn-warning" style="margin-top:5px;">Connect with Us</button>
+              </form>
+              <p id="f1-data"> join over 20,000 others and recieve our tri-weekly newsletters.</p>
+  
+  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 social-wrap">
+              <div class="social">
+                <a href="https://www.facebook.com/acmnitsurat">
+                  <i style="color : #3B5998; font-size: 2em;margin-top: 20px" class="fa fa-facebook-square"></i>
+                </a>
+              </div>
+              <div class="social">
+                <a href="mailto:acmnitsurat@gmail.com">
+                  <i style="color: #d34836; font-size: 2em;margin-top: 20px" class="fa fa-google"></i>
+                </a>
+              </div>
+              <div class="social">
+                <a href="https://twitter.com/acmnitsurat">
+                  <i style="color: #4099ff; font-size: 2em;margin-top: 20px" class="fa fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+  
+  
+      </footer>
+    
       <!-- <script src="js/data.js"></script> -->
       <script src="js/main.js"></script>
       <!-- <script src="js/memberData.js"></script> -->
