@@ -112,7 +112,7 @@
     </div>
     <div class="fullhr"></div>
 	<div id="headerblock" >
-    <div class="menu-icon" class="middle">
+    <div class="menu-icon text-center">
       <i class="fa fa-bars fa-2x"></i>
       <!-- <span class="menubar" style="text-align:center">MENU</span> -->
     </div>
