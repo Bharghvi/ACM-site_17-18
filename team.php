@@ -258,44 +258,7 @@
         ?>
   </div>
 
-<div class="footer-content">
-    <div class="f1">
-      <h3 style="font-size: 1.15em; margin: 0">ACM - NIT,  SURAT</h3>
-      <br>
-    <hr class="hr">
-    <p id="f1-data">ACM NIT-Surat is a student chapter highly focused on planning and organising events for coding, development, design, etc.</p>
-    <h4>Get Social</h4>
-     <a class="social" href="https://www.facebook.com/acmnitsurat">  <i style="color : #3B5998; font-size: 1.5em;margin-top: 20px" class="fa fa-facebook-square"></i></a>
 
-     <a class="social" href="mailto:acmnitsurat@gmail.com"><i style="color: #d34836; font-size: 1.5em;margin-top: 20px" class="fa fa-google"></i></a>
-
-    <a class="social" href="https://twitter.com/acmnitsurat"><i style="color: #4099ff; font-size: 1.5em;margin-top: 20px" class="fa fa-twitter"></i></a>
-      </div>
-    <div class="f2">
-      <h3 style="font-size: 1.15em; margin: 0">QUICK LINKS</h3>
-      <br>
-      <hr class="hr">
-      <ul id="tags">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./events.html">Events</a></li>
-        <li><a href="./team.php">Team</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="f3">
-      <h3 style="font-size: 1.15em; margin: 0">CONTACT</h3>
-      <br>
-      <hr class="hr">
-      <i class='fa fa-map-marker' style="color: #cbd1db; margin-top: 20px"></i>
-      <p>SVNIT, Ichchhanth, Surat - 395 007</p><br>
-      <i class='fa fa-envelope' style="color: #cbd1db"></i>
-      <p>acmnitsurat@gmail.com</p><br>
-      <i class='fa fa-mobile' style="color: #cbd1db"></i>
-      <p>SVNIT, Ichchhanth, Surat - 395 007</p>
-
-    </div>
-  </div>
   <footer>
   <div class="container">
     <div class="row text-center">
