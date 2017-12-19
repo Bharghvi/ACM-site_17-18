@@ -24,6 +24,7 @@
   .menu-icon{
       display: block;
       box-sizing: border-box;
+      text-align: center;
   }
 }
 
@@ -61,3 +62,5 @@
     margin-top: 3em;
   }
 }
+
+

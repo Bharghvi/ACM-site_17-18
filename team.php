@@ -88,7 +88,8 @@
 	function topFunction() {
 	    document.body.scrollTop = 0;
 	    document.documentElement.scrollTop = 0;
-	}
+  }
+  
 
 </script>
 <script type="text/javascript" src="js/responsive.js"></script>
@@ -110,8 +111,8 @@
       <div class="clear"></div>
     </div>
     <div class="fullhr"></div>
-	<div id="headerblock" class="middle">
-    <div class="menu-icon">
+	<div id="headerblock" >
+    <div class="menu-icon" class="middle">
       <i class="fa fa-bars fa-2x"></i>
       <!-- <span class="menubar" style="text-align:center">MENU</span> -->
     </div>
